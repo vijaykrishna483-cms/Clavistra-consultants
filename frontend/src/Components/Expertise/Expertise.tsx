@@ -9,7 +9,7 @@ interface AnimatedNumberProps {
 const AnimatedNumber: React.FC<AnimatedNumberProps> = ({ target }) => {
   const [count, setCount] = useState(0);
   const ref = useRef<HTMLSpanElement | null>(null);
-  const inView = useInView(ref, { once: true });(ref, { once: true });
+  const inView = useInView(ref, { once: true });
 
   useEffect(() => {
     if (inView) {
