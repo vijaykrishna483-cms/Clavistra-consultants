@@ -84,7 +84,7 @@ const Hero = () => {
         {slides.map((slide, index) => (
           <div
             key={index}
-            className={`absolute text-8xl font-bold w-[60vw] text-center transition-all duration-[1500ms] ease-in-out ${
+            className={`absolute text-5xl md:text-8xl font-bold w-[100vw] md:w-[60vw] text-center transition-all duration-[1500ms] ease-in-out ${
               index === currentIndex ? "opacity-100 translate-x-0" : "opacity-0 translate-x-30"
             }`}
           >
@@ -94,28 +94,28 @@ const Hero = () => {
       </div>
 
       {/* Navigation Arrows */}
-      <div className="absolute right-20 top-1/2 transform -translate-y-1/2 flex flex-col gap-4 z-30">
+      <div className="absolute right-[30vw] md:right-20 top-[90vh] md:top-1/2 transform -translate-y-1/2 flex flex-row md:flex-col gap-4 z-30">
         <button
           onClick={prevSlide}
-          className="w-14 h-14 border border-white flex items-center justify-center text-white transition-all duration-300 hover:bg-white hover:text-black"
+          className="md:w-14 md:h-14 w-12 h-12 border border-white flex items-center justify-center text-white transition-all duration-300 hover:bg-white hover:text-black"
         >
           <ChevronLeft size={30} />
         </button>
         <button
           onClick={nextSlide}
-          className="w-14 h-14 border border-white flex items-center justify-center text-white transition-all duration-300 hover:bg-white hover:text-black"
+          className="md:w-14 md:h-14 w-12 h-12  border border-white flex items-center justify-center text-white transition-all duration-300 hover:bg-white hover:text-black"
         >
           <ChevronRight size={30} />
         </button>
       </div>
 
       {/* Function Text Box */}
-      <div className="absolute z-100 w-[35vw] flex justify-center items-center h-[10vh] bg-[#fff] left-[65vw] top-[90vh]">
+      <div className="absolute z-100 md:w-[35vw] top-[97vh] w-[56vw] flex justify-center items-center h-[10vh] bg-[#fff] left-[44vw] md:left-[65vw] md:top-[90vh]">
         {slides.map((slide, index) => (
           <div
             key={index}
             onClick={() => window.open(slide.link, "_blank")} // Opens link in a new tab
-            className={`absolute text-md font-lighter text-center cursor-pointer transition-all duration-[1500ms] ease-in-out ${
+            className={`md:absolute  hidden text-md font-lighter text-center cursor-pointer transition-all duration-[1500ms] ease-in-out ${
               index === currentIndex ? "opacity-100 translate-x-0" : "opacity-0 translate-x-30"
             }`}
           >
