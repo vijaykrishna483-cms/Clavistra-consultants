@@ -28,7 +28,7 @@ const AnimatedNumber: React.FC<AnimatedNumberProps> = ({ target }) => {
   }, [inView, target]);
 
   return (
-    <span ref={ref} style={{ WebkitTextStroke: "2px black" }} className="border-b border-gray-500/30 font-bold text-8xl md:text-[6vw] text-transparent">
+    <span ref={ref} style={{ WebkitTextStroke: "2px black" }} className="border-b border-gray-500/30 font-bold  text-8xl md:text-[6vw] text-transparent">
       {count}
     </span>
   );
@@ -44,7 +44,7 @@ const Expertise = () => {
         transition={{ duration: 0.8, ease: "easeOut" }}
         className="w-[100vw] md:h-[40%] flex justify-start"
       >
-        <h1 className="border-b py-[2vh] border-gray-500/30 text-[#333333] text-4xl md:text-[7vw] font-bold md:w-[60%] leading-tight">
+        <h1 className="border-b py-[2vh] border-gray-500/30 text-[#333333] text-5xl md:text-[7vw] font-bold md:w-[60%] leading-tight">
           Our Area of Expertise
         </h1>
       </motion.div>
@@ -110,7 +110,7 @@ const Expertise = () => {
         initial={{ opacity: 0, y: 50 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 1.5, ease: "easeOut" }}
-        className="w-[100%] py-[5vh] gap-[2vw] md:items-center items-start justify-center flex md:flex-row flex-col"
+        className="w-[100%] py-[5vh] gap-[5vh] md:gap-[2vw] md:items-center items-center justify-center flex md:flex-row flex-col"
       >
         <div className="flex flex-col md:w-[22%]">
             <div className="flex">

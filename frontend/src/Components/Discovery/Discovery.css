@@ -1,0 +1,65 @@
+:root {
+    --n: 5; /* number of images */
+    --d: 10s; /* duration */
+  }
+  
+  .gallery {
+    display: grid;
+    margin-top: 10vh;
+  }
+  
+  
+  .gallery > img {
+    grid-area: 1/1;
+    width:80vw;
+    aspect-ratio: 1;
+    object-fit: cover;
+    /* border: 10px solid #f2f2f2; */
+    box-shadow: 0 0 4px #0007;
+    z-index: 2;
+    animation: 
+      slide var(--d) infinite,
+      z-order var(--d) infinite steps(1);
+  }
+  
+  .gallery img:last-child {
+    animation-name: slide, z-order-last;
+  }
+  
+  /* Manually expanding the SCSS loop */
+  .gallery > img:nth-child(1) {
+    animation-delay: calc((1 - 1) / var(--n) * var(--d));
+    --r: 3deg;
+  }
+  
+  .gallery > img:nth-child(2) {
+    animation-delay: calc((1 - 2) / var(--n) * var(--d));
+    --r: 5deg;
+    transform: translate(-10vh, -10vh);
+    /* z-index: -1; */
+  }
+  
+  .gallery > img:nth-child(3) {
+    animation-delay: calc((1 - 3) / var(--n) * var(--d));
+    --r: 0deg;
+    transform: translate(-20px, -20px);
+    /* z-index: -2; */
+  }
+  
+  
+  @keyframes slide {
+    10% { transform: translateX(20%) rotate(var(--r)); }
+    0%, 100%, 20% { transform: translateX(0%) rotate(var(--r)); }
+  }
+  
+  @keyframes z-order {
+    10%, 20% { z-index: 1; }
+    90% { z-index: 2; }
+  }
+  
+  @keyframes z-order-last {
+    10%, 20% { z-index: 1; }
+    75% { z-index: 2; }
+  }
+  
+ 

@@ -114,8 +114,8 @@ const Hero = () => {
         {slides.map((slide, index) => (
           <div
             key={index}
-            onClick={() => window.open(slide.link, "_blank")} // Opens link in a new tab
-            className={`md:absolute  hidden text-md font-lighter text-center cursor-pointer transition-all duration-[1500ms] ease-in-out ${
+            onClick={() => window.open(slide.link, "_blank")} 
+            className={`md:block hidden absolute   text-md font-lighter text-center cursor-pointer transition-all duration-[1500ms] ease-in-out ${
               index === currentIndex ? "opacity-100 translate-x-0" : "opacity-0 translate-x-30"
             }`}
           >

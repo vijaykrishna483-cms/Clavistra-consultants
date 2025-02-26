@@ -8,7 +8,7 @@ const Navbar = () => {
   const [active, setActive] = useState<number | null>(null);
   const [isScrolled, setIsScrolled] = useState(false);
 
-  const navItems = ["HOME", "ABOUT", "SERVICES", "CONTACT", "PROJECTS", "MEDIA", "INSIGHTS"];
+  const navItems = ["HOME", "ABOUT", "SERVICES", "CONTACT", "PROJECTS", "MEDIA", "INSIGHTS","SEARCH"];
 
   // Detect Scroll Position
   useEffect(() => {
@@ -24,7 +24,7 @@ const Navbar = () => {
     <div>
       {/* Desktop Navbar */}
       <nav
-        className={`fixed md:block hidden z-50 top-0 pt-5 left-0 w-full border-b border-gray-500/30 transition-all duration-300 ${
+        className={`fixed md:block hidden z-999 top-0 pt-5 left-0 w-full border-b border-gray-500/30 transition-all duration-300 ${
           isScrolled ? "bg-white text-black shadow-md" : "bg-transparent text-white"
         }`}
       >
@@ -79,7 +79,7 @@ const Navbar = () => {
               isScrolled ? "text-black" : "text-white"
             }`}
           >
-            {open ? <IoMdClose className="z-100 relative transition-transform duration-300" /> : <IoMdMenu />}
+            {open ? <IoMdClose className="z-100 text-black relative transition-transform duration-300" /> : <IoMdMenu />}
           </button>
         </div>
 
