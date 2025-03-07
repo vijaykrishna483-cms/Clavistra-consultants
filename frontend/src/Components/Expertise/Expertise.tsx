@@ -1,39 +1,39 @@
 import { ArrowUpRight } from "lucide-react";
 import { motion, useInView } from "framer-motion";
-import { useEffect, useState, useRef } from "react";
+// import { useEffect, useState, useRef } from "react";
 import { Lightbulb, Brain, Compass } from "lucide-react";
 import Brand from '../../assets/brand.jpg'
-interface AnimatedNumberProps {
-  target: number;
-}
+// interface AnimatedNumberProps {
+//   target: number;
+// }
 
-const AnimatedNumber: React.FC<AnimatedNumberProps> = ({ target }) => {
-  const [count, setCount] = useState(0);
-  const ref = useRef<HTMLSpanElement | null>(null);
-  const inView = useInView(ref, { once: true });
+// const AnimatedNumber: React.FC<AnimatedNumberProps> = ({ target }) => {
+//   const [count, setCount] = useState(0);
+//   const ref = useRef<HTMLSpanElement | null>(null);
+//   const inView = useInView(ref, { once: true });
 
-  useEffect(() => {
-    if (inView) {
-      let start = 0;
-      const duration = 2000; // 2 seconds
-      const stepTime = Math.abs(Math.floor(duration / target));
+//   useEffect(() => {
+//     if (inView) {
+//       let start = 0;
+//       const duration = 2000; // 2 seconds
+//       const stepTime = Math.abs(Math.floor(duration / target));
 
-      const timer = setInterval(() => {
-        start += 1;
-        setCount(start);
-        if (start >= target) clearInterval(timer);
-      }, stepTime);
+//       const timer = setInterval(() => {
+//         start += 1;
+//         setCount(start);
+//         if (start >= target) clearInterval(timer);
+//       }, stepTime);
 
-      return () => clearInterval(timer);
-    }
-  }, [inView, target]);
+//       return () => clearInterval(timer);
+//     }
+//   }, [inView, target]);
 
-  return (
-    <span ref={ref} style={{ WebkitTextStroke: "2px black" }} className="border-b border-gray-500/30 font-bold  text-8xl md:text-[6vw] text-transparent">
-      {count}
-    </span>
-  );
-};
+//   return (
+//     <span ref={ref} style={{ WebkitTextStroke: "2px black" }} className="border-b border-gray-500/30 font-bold  text-8xl md:text-[6vw] text-transparent">
+//       {count}
+//     </span>
+//   );
+// };
 
 const Expertise = () => {
   return (
