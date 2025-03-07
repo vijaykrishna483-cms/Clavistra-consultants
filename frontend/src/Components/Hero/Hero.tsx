@@ -1,38 +1,42 @@
 import { useState, useEffect } from "react";
-import { ChevronRight, ChevronLeft } from "lucide-react";
+import { ChevronRight, ChevronLeft, X } from "lucide-react";
 import Bg1 from "../../assets/office.jpg";
 import Bg2 from "../../assets/bg2.jpg";
 import Bg3 from "../../assets/bg3.jpg";
 import Navbar from "../Navbar/Navbar";
-
+import {  PhoneCall } from "lucide-react";
+import './Hero.css'
 const slides = [
   {
     image: Bg1,
-    quote: "Innovation begins with a single idea.",
-    functn: "Incorporate your Company’s Branding and Values. | Details",
+    quote: "Transforming Your Vision to Reality",
+    functn: "You have a vision? | We have a solution",
     link: "https://www.youtube.com/",
     number:"01",
   },
   {
     image: Bg2,
-    quote: "Vision to Reality.",
-    functn: "Incorporate your Company’s Branding and Values. | Details",
-    link: "https://www.youtube.com/",
+    quote: "Refining and Redefining  Brand",
+    functn: "You have a vision? | We have a solution",    link: "https://www.youtube.com/",
     number:"02",
 
   },
   {
     image: Bg3,
-    quote: "Transforming ideas into structures",
-    functn: "Incorporate your Company’s Branding and Values. | Details",
-    link: "https://www.youtube.com/",
+    quote: "Let's Get started",
+    functn: "You have a vision? | We have a solution",
+        link: "https://www.youtube.com/",
     number:"03",
 
   }
 ];
 
 const Hero = () => {
+
+  const [showPopup, setShowPopup] = useState(false);
   const [currentIndex, setCurrentIndex] = useState(0);
+
+  const [slideCount, setSlideCount] = useState(0);
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -42,17 +46,19 @@ const Hero = () => {
   }, []);
 
   const nextSlide = () => {
+    setSlideCount((prev) => prev + 1);
+    if (slideCount >= slides.length - 1) {
+      setShowPopup(true);
+    }
     setCurrentIndex((prevIndex) => (prevIndex + 1) % slides.length);
   };
 
   const prevSlide = () => {
-    setCurrentIndex((prevIndex) =>
-      prevIndex === 0 ? slides.length - 1 : prevIndex - 1
-    );
+    setCurrentIndex((prevIndex) => (prevIndex === 0 ? slides.length - 1 : prevIndex - 1));
   };
 
   return (
-    <div className="relative h-screen w-full overflow-hidden">
+    <div className="relative h-screen w-full overflow-x-hidden">
       <Navbar />
 
       {/* Background Images */}
@@ -110,18 +116,16 @@ const Hero = () => {
       </div>
 
       {/* Function Text Box */}
-      <div className="absolute z-100 md:w-[35vw] top-[97vh] w-[56vw] flex justify-center items-center h-[10vh] bg-[#fff] left-[44vw] md:left-[65vw] md:top-[90vh]">
-        {slides.map((slide, index) => (
-          <div
-            key={index}
-            onClick={() => window.open(slide.link, "_blank")} 
-            className={`md:block hidden absolute   text-md font-lighter text-center cursor-pointer transition-all duration-[1500ms] ease-in-out ${
-              index === currentIndex ? "opacity-100 translate-x-0" : "opacity-0 translate-x-30"
-            }`}
-          >
-            {slide.functn}
-          </div>
-        ))}
+      <div className="fixed z-100 md:w-[25vw] rounded-2xl top-[94vh] w-[56vw] flex flex-row  justify-center items-center shadow-3xl h-[20vh] bg-[#] left-[44vw] md:left-[72vw] md:top-[81vh]">
+          
+         <div className="w-[100%] ml-[9vh] flex flex-row align-middle justify-center items-center gap-[10px]">
+<button className="w-[90%] h-[50px] text-black rounded-3xl bg-transparent hover:bg-[#e9ece9] border-2 border-[#6c6969] text-center font-extralight align-middle ">Book A call With Us..!</button>
+<div className="bg-[#11f011] rounded-full p-[15px]">
+<PhoneCall size={24} />
+  </div>
+
+</div>
+
       </div>
 
       {/* Navigation Dots */}
@@ -142,8 +146,52 @@ const Hero = () => {
         </p>
     </div>
   ))}
+
+
+
+</div>
+{showPopup && (
+        <div className=" fixed  w-[100vw] h-[100vh] inset-0 flex items-center justify-center bg-[#1b1616c1] bg-opacity-50 z-50">
+          {/* <div className="box bg-white w-[40vw] h-[60vh] p-6 rounded-lg flex flex-col gap-[4vh] items-center justify-center shadow-lg text-center relative ">
+            <button className="absolute top-2 right-2 text-gray-500 hover:text-gray-800" onClick={() => setShowPopup(false)}>
+              <X size={20} />
+            </button>
+            <p className="text-xl">Lets Get started.!</p>
+            <h2 className="text-4xl font-bold mb-2">Sign Up Now!</h2>
+            <p className="text-lg">For exclusive marketing news and trends</p>
+            <input type="email" placeholder="Enter your email" className="w-[70%] p-2 border-b-2 bg-[#ffffff13] border-gray-700 rounded-2xl mb-4" />
+            <button className="bg-black text-white px-4 py-2 rounded-2xl hover:bg-gray-800">Subscribe</button>
+          </div> */}
+
+<article className="card py-[6vh]  bg-[#c9c7c7f7]">
+  <div className="flex flex-col justify-center items-center gap-[2vh]">
+  <button className="absolute top-2 right-2 text-gray-500 hover:text-gray-800" onClick={() => setShowPopup(false)}>
+              <X size={40} />
+            </button>
+  
+<img src="thefinal.png" className="w-[18vw]"/>
+  <h2 className="text-6xl font-bold mb-1 text-[#000]">Sign Up Now!</h2>
+  <p className="text-2xl text-[#3a3838] font-lighter">For exclusive marketing news and trends</p>
+  <input type="email" placeholder="Enter your email" className="w-[83%] text-[#000] pl-[15px] p-2 border-b-2 bg-[#ffffff13] border-blue-700 rounded-2xl mb-2" />
+  <button className="bg-[rgb(46,49,146)] text-white px-[3vw] py-[2vh] rounded-4xl hover:bg-[#2e3192]">Subscribe</button>
+<div className="w-[100%] ml-[9vh] flex flex-row align-middle justify-center items-center gap-[10px]">
+<button className="w-[90%] h-[50px] text-black rounded-3xl bg-transparent border-2 border-[#6c6969] text-center font-extralight align-middle ">Book A call With Us..!</button>
+<div className="bg-[#179e17] rounded-full p-[15px]">
+<PhoneCall size={24} />
+  </div>
+
 </div>
 
+</div>
+  <span className="top"></span>
+  <span className="right"></span>
+  <span className="bottom"></span>
+  <span className="left"></span>
+</article>
+
+
+        </div>
+      )}
     </div>
   );
 };

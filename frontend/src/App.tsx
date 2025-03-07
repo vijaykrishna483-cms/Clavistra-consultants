@@ -25,8 +25,8 @@ function App() {
       } } onNext={function (): void {
         throw new Error('Function not implemented.')
       } } />
-     <Features/>
-     <Companies/>
+     {/* <Features/> */}
+     {/* <Companies/> */}
      <Projects/>
      <News/>
      <Team/>

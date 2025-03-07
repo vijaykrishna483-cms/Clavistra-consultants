@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion"; // For smooth animations
 import { IoMdMenu, IoMdClose } from "react-icons/io"; // Icons for the menu
-import Logo from "../../assets/hd.png"; // Adjust your logo path
+import Logo from "../../assets/thefinal.png"; // Adjust your logo path
 
 const Navbar = () => {
   const [open, setOpen] = useState(false);
@@ -21,16 +21,14 @@ const Navbar = () => {
   }, []);
 
   return (
-    <div>
+    <div className="w-[100vw] overflow-hidden">
       {/* Desktop Navbar */}
       <nav
-        className={`fixed md:block hidden z-999 top-0 pt-5 left-0 w-full border-b border-gray-500/30 transition-all duration-300 ${
-          isScrolled ? "bg-white text-black shadow-md" : "bg-transparent text-white"
-        }`}
+        className={`fixed md:block hidden z-999 top-0 pt-5 left-0 w-full border-b bg-white text-black border-gray-500/30 transition-all duration-300 `}
       >
         <div className="mx-[5vw] px-10 flex justify-around items-center h-16">
           {/* Logo */}
-          <img src={Logo} alt="Logo" className="w-[7vw]" />
+          <img src={Logo} alt="Logo" className="w-[12vw]" />
 
           {/* Navigation Items */}
           <ul className="flex space-x-6 text-lg relative">
@@ -38,21 +36,17 @@ const Navbar = () => {
               <li
                 key={index}
                 onClick={() => setActive(index)}
-                className="relative cursor-pointer px-2 py-2 overflow-hidden"
+                className="relative cursor-pointer px-2 py-2  text-black overflow-hidden"
               >
                 {/* Background Growing Effect */}
                 <motion.div
                   initial={{ scaleX: 0 }}
                   animate={{ scaleX: active === index ? 1 : 0 }}
                   transition={{ duration: 0.4, ease: "easeInOut" }}
-                  className={`absolute inset-0 rounded-md origin-right ${
-                    isScrolled ? "bg-[#ebe6e6]" : "bg-black"
-                  }`}
+                  className={`absolute inset-0 rounded-md origin-right bg-[#fff] text-black`}
                 />
                 <span
-                  className={`relative z-10 text-xl font-semibold transition duration-300 ${
-                    isScrolled ? "text-black" : "text-white"
-                  }`}
+                  className={`relative z-200 text-xl font-semibold transition duration-300 `}
                 >
                   {item}
                 </span>
@@ -65,7 +59,7 @@ const Navbar = () => {
       {/* Mobile Navbar */}
       <nav
         className={`fixed md:hidden block z-50 top-0 w-full border-b border-gray-500/30 transition-all duration-300 ${
-          isScrolled ? "bg-white text-black shadow-md" : "bg-transparent text-white"
+          isScrolled ? "bg-white text-black shadow-md" : "bg-white text-white"
         }`}
       >
         <div className="w-full flex items-center justify-between px-6 py-4">
