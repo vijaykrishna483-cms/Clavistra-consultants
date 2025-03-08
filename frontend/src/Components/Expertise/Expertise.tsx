@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 // import { useEffect, useState, useRef } from "react";
 import { Lightbulb, Brain, Compass } from "lucide-react";
 import Brand from '../../assets/brand.jpg'
+import { useNavigate } from "react-router-dom";
 // interface AnimatedNumberProps {
 //   target: number;
 // }
@@ -36,6 +37,7 @@ import Brand from '../../assets/brand.jpg'
 // };
 
 const Expertise = () => {
+  const navigate =useNavigate();
   return (
     <div className="relative w-[100vw] md:h-[]  mt-[2vh] md:mt-[10vh]">
       {/* Heading Section */}
@@ -215,6 +217,7 @@ const Expertise = () => {
     {/* Column 1 */}
     <div className="w-[35%] border-r-2 border-[#b9b8b8] flex flex-col">
       <motion.div
+       onClick={() => navigate("/brandanalysis")}
         initial={{ opacity: 0, y: 50, scale: 0.9 }}
         whileInView={{ opacity: 1, y: 0, scale: 1 }}
         transition={{ duration: 0.5, ease: "easeOut" }}
@@ -222,7 +225,7 @@ const Expertise = () => {
         className="flex flex-col justify-start gap-[4vh] py-[4vh] px-[2vw]"
       >
         <h2 className="text-3xl font-medium">Brand Analysis</h2>
-        <p>Need a voice that speaks right to your audience's heart?...</p>
+        <p>Need a voice that speaks right to your audience's heart? That's where we come in! Our advertising campaigns are like a megaphone for your brand</p>
         <motion.img 
           src={Brand} 
           className="border-2 border-[#cac3c3]" 
@@ -231,6 +234,8 @@ const Expertise = () => {
       </motion.div>
 
       <motion.div
+             onClick={() => navigate("/brandstrategy")}
+
         initial={{ opacity: 0, y: 50, scale: 0.9 }}
         whileInView={{ opacity: 1, y: 0, scale: 1 }}
         transition={{ duration: 0.5, ease: "easeOut" }}
@@ -238,7 +243,7 @@ const Expertise = () => {
         className="flex flex-col justify-start gap-[4vh] py-[4vh] px-[2vw]"
       >
         <h2 className="text-3xl font-medium">Brand Strategy</h2>
-        <p>Our advertising campaigns are like a megaphone for your brand...</p>
+        <p>Our efforts extend beyond mere flashy campaigns and superficial metrics. They revolve around problem-solving, fostering innovation, embracing creativity</p>
         <motion.img 
           src="sss.jpg" 
           className="border-2 border-[#cac3c3]" 
@@ -250,6 +255,8 @@ const Expertise = () => {
     {/* Column 2 */}
     <div className="w-[35%] border-r-2 border-[#b9b8b8] flex flex-col">
       <motion.div
+                   onClick={() => navigate("/socialmediamanagement")}
+
         initial={{ opacity: 0, y: 50, scale: 0.9 }}
         whileInView={{ opacity: 1, y: 0, scale: 1 }}
         transition={{ duration: 0.5, ease: "easeOut" }}
@@ -257,7 +264,8 @@ const Expertise = () => {
         className="flex flex-col justify-start gap-[4vh] py-[4vh] px-[2vw]"
       >
         <h2 className="text-3xl font-medium">Social Media Management</h2>
-        <p>Get ready to embark on a social media journey...</p>
+        <p>Get ready to embark on a social media journey that truly sets your brand apart – with Bluefrogs Agency Social Media Management.
+        </p>
         <motion.img 
           src={Brand} 
           className="border-2 border-[#cac3c3]" 
@@ -266,6 +274,8 @@ const Expertise = () => {
       </motion.div>
 
       <motion.div
+                   onClick={() => navigate("/performancemarketing")}
+
         initial={{ opacity: 0, y: 50, scale: 0.9 }}
         whileInView={{ opacity: 1, y: 0, scale: 1 }}
         transition={{ duration: 0.5, ease: "easeOut" }}
@@ -273,7 +283,7 @@ const Expertise = () => {
         className="flex flex-col justify-start gap-[4vh] py-[4vh] px-[2vw]"
       >
         <h2 className="text-3xl font-medium">Performance Marketing</h2>
-        <p>We combine purpose-driven storytelling...</p>
+        <p>We combine purpose-driven storytelling and data-driven marketing strategies to enhance brand recall and maximize your ROI.</p>
         <motion.img 
           src={Brand} 
           className="border-2 border-[#cac3c3]" 
@@ -285,14 +295,16 @@ const Expertise = () => {
     {/* Column 3 */}
     <div className="w-[35%] border-r-2 border-[#b9b8b8] flex flex-col">
       <motion.div
+                   onClick={() => navigate("/searchengineoptimization")}
+
         initial={{ opacity: 0, y: 50, scale: 0.9 }}
         whileInView={{ opacity: 1, y: 0, scale: 1 }}
         transition={{ duration: 0.5, ease: "easeOut" }}
         whileHover={{ scale: 1.05, y: -10, boxShadow: "0px 10px 30px rgba(0,0,0,0.1)" }}
         className="flex flex-col justify-start gap-[4vh] py-[4vh] px-[2vw]"
       >
-        <h2 className="text-3xl font-medium">Brand Analysis</h2>
-        <p>Our advertising campaigns are like a megaphone for your brand...</p>
+        <h2 className="text-3xl font-medium">Search Engine Optimization</h2>
+        <p>At Bluefrogs, we believe in the power of Digital Marketing to transform your online presence.</p>
         <motion.img 
           src="sss.jpg" 
           className="border-2 border-[#cac3c3]" 
@@ -301,14 +313,16 @@ const Expertise = () => {
       </motion.div>
 
       <motion.div
+                   onClick={() => navigate("/websitedevelopmentmanagement")}
+
         initial={{ opacity: 0, y: 50, scale: 0.9 }}
         whileInView={{ opacity: 1, y: 0, scale: 1 }}
         transition={{ duration: 0.5, ease: "easeOut" }}
         whileHover={{ scale: 1.05, y: -10, boxShadow: "0px 10px 30px rgba(0,0,0,0.1)" }}
         className="flex flex-col justify-start gap-[4vh] py-[4vh] px-[2vw]"
       >
-        <h2 className="text-3xl font-medium">Brand Analysis</h2>
-        <p>Need a voice that speaks right to your audience's heart?...</p>
+        <h2 className="text-3xl font-medium">Website Development & Management</h2>
+        <p>Elevate your digital presence with BlueFrogs - where websites transform into experiences!</p>
         <motion.img 
           src={Brand} 
           className="border-2 border-[#cac3c3]" 
