@@ -52,11 +52,35 @@ const Expertise = () => {
         </h1>
       </motion.div>
 
+      {/* Description Section */}
+      <motion.div
+        initial={{ opacity: 0, y: 50 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 1, ease: "easeOut" }}
+        className="flex flex-col px-[5%] md:px-[10%] justify-center items-base"
+      >
+        <h2 className="md:text-3xl text-xl font-semibold py-[3vh]">
+        Strategic Thinking. Tailored Solutions. Measurable Outcomes.
+        </h2>
+        <div className="flex md:flex-row flex-col align-baseline justify-between">
+          <p className="font-light md:w-[70%]">
+          We partner with businesses to craft data-driven strategies, define powerful brand architectures, and execute innovative digital solutions. With deep expertise across industries, we help you navigate complexity, unlock growth opportunities, and build sustainable competitive advantages—turning challenges into outcomes and ideas into lasting impact.          </p>
+          <div className="flex mt-[3vh] md:w-[20%] items-center text-lg">
+            <p>All Services</p>
+            <ArrowUpRight size={24} strokeWidth={2} />
+          </div>
+        </div>
+      </motion.div>
+
+
+
+
+
       <motion.div 
       initial={{ opacity: 0, y: 50 }}
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 1.5, ease: "easeOut" }}
-      className="md:w-[100vw] py-[5vh] gap-[10vw] px-[10%] md:gap-[10vw] flex flex-col md:flex-row items-center justify-center"
+      className="md:w-[100vw] py-[5vh] gap-[10vw] px-[10%] md:gap-[10vw] mt-[7vh] flex flex-col md:flex-row items-center justify-center"
     >
       {/* Strategy Section */}
       <div className="flex flex-row  w-[30vw] gap-[1vw] align-middle justify-center  items-center text-left space-y-4">
@@ -103,27 +127,6 @@ const Expertise = () => {
       </div>
 
     </motion.div>
-      {/* Description Section */}
-      <motion.div
-        initial={{ opacity: 0, y: 50 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 1, ease: "easeOut" }}
-        className="flex flex-col px-[5%] md:px-[10%] justify-center items-base"
-      >
-        <h2 className="md:text-3xl text-xl font-semibold py-[3vh]">
-          Design is thinking made visual.
-        </h2>
-        <div className="flex md:flex-row flex-col align-baseline justify-between">
-          <p className="font-light md:w-[70%]">
-            Crafting spaces that are visually captivating, comfortable, and sustainable. With our expertise in design and construction, we address the unique challenges of healthcare and workplace interiors, providing personalized solutions tailored to your needs.
-          </p>
-          <div className="flex mt-[3vh] md:w-[20%] items-center text-lg">
-            <p>All Services</p>
-            <ArrowUpRight size={24} strokeWidth={2} />
-          </div>
-        </div>
-      </motion.div>
-
       {/* Services Section */}
       <motion.div 
         initial={{ opacity: 0, y: 50 }}
@@ -132,26 +135,25 @@ const Expertise = () => {
         className="text-sm text-[#333333] w-[100%] py-[vh] md:items-center items-start justify-center flex md:flex-row flex-col"
       >
        
-    <div className='text-sm  text-[#333333] w-[100%] py-[5vh] md:items-center items-start justify-center flex md:flex-row flex-col'>
+    <div className='text-sm  text-[#333333] w-[90%] px-[4%] py-[5vh] md:items-center items-start justify-center flex md:flex-row flex-col'>
           
           <div className='md:w-[30%] flex flex-col justify-center items-center'>
-            <p className='flex justify-center items-center align-middle'><span className='font-bold text-3xl mb-[2px]'>+</span>Feasibility Studies</p>
-            <p className='flex justify-center items-center align-middle'><span className='font-bold text-3xl mb-[2px]'>+</span>Feasibility Studies</p>
-            <p className='flex justify-center items-center align-middle'><span className='font-bold text-3xl mb-[2px]'>+</span>Feasibility Studies</p>
+            <p className='flex justify-center items-center align-middle font-bold '><span className='font-bold text-3xl mb-[2px] mr-[5px]'>+</span> Branding & Brand Strategy</p>
+
+          </div>
+          <div className='md:w-[30%] flex flex-col justify-center items-center'>
+          <p className='flex justify-center items-center align-middle font-bold'><span className='font-bold text-3xl mb-[2px]  mr-[5px]'>+</span>Market & Digital Presence</p>
+
+          </div>
+          <div className='md:w-[30%] flex flex-col justify-center items-center'>
+            <p className='flex justify-center items-center align-middle font-bold'><span className='font-bold text-3xl mb-[2px]  mr-[5px]'>+</span>Finance & Accounting Service</p>
 
           </div>
 
-          <div className='md:w-[30%] flex flex-col justify-center items-center'>
-            <p className='flex justify-center items-center align-middle'><span className='font-bold text-3xl mb-[2px]'>+</span>Feasibility Studies</p>
-            <p className='flex justify-center items-center align-middle'><span className='font-bold text-3xl mb-[2px]'>+</span>Feasibility Studies</p>
-            <p className='flex justify-center items-center align-middle'><span className='font-bold text-3xl mb-[2px]'>+</span>Feasibility Studies</p>
+        
 
-          </div>
-
-          <div className='md:w-[30%] flex flex-col justify-center items-center'>
-            <p className='flex justify-center items-center align-middle'><span className='font-bold text-3xl mb-[2px]'>+</span>Feasibility Studies</p>
-            <p className='flex justify-center items-center align-middle'><span className='font-bold text-3xl mb-[2px]'>+</span>Feasibility Studies</p>
-            <p className='flex justify-center items-center align-middle'><span className='font-bold text-3xl mb-[2px]'>+</span>Feasibility Studies</p>
+          <div className='md:w-[30%] flex flex-col justify-center items-start'>
+          <p className='flex justify-center  items-center align-middle font-bold'><span className='font-bold text-3xl mb-[2px]  mr-[5px]'>+</span>Website & IT Solution</p>
 
           </div>
 

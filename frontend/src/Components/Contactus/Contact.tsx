@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { ArrowUpRight } from "lucide-react";
+// import { ArrowUpRight } from "lucide-react";
 import { useState, useEffect } from "react";
 import { Parallax } from "react-parallax";
 
@@ -17,9 +17,9 @@ const Contact = () => {
 
   return (
     <div className="w-[100vw] h-full mt-[30vh]">
-      {/* About Us */}
+{/*      
       <div className="px-[6%] md:px-[10%] mb-[15vh]">
-        {/* Contact Us Text with Arrow */}
+      
         <motion.div
           className="flex w-full items-end justify-end text-lg"
           initial={{ opacity: 0, x: 20 }}
@@ -31,7 +31,7 @@ const Contact = () => {
           <ArrowUpRight size={24} strokeWidth={2} />
         </motion.div>
 
-        {/* Animated Headline */}
+  
         <motion.h1
           className="border-b border-gray-500/30 text-[#333333] text-4xl md:text-[7vw] font-bold w-[90%] py-[2vh] md:pb-[2vh] md:leading-[100px]"
           initial={{ opacity: 0, y: 20 }}
@@ -51,7 +51,7 @@ const Contact = () => {
           ))}
         </motion.h1>
 
-        {/* Subheading */}
+    
         <motion.h1
           className="tetx-xl md:text-3xl mt-[2vh] text-[#004aad] font-semibold w-[90%] leading-tight"
           initial={{ opacity: 0, x: -20 }}
@@ -62,7 +62,7 @@ const Contact = () => {
           Stay connected with our team and never miss a design update, industry
           news, or special offers. Join our community of design enthusiasts.
         </motion.h1>
-      </div>
+      </div> */}
 
       {/* Parallax Section */}
       <Parallax

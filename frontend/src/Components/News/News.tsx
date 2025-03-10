@@ -40,7 +40,7 @@ const News = () => {
           transition={{ duration: 1 }}
           viewport={{ once: true }}
         >
-          {"Latest News".split(" ").map((char, index) => (
+          {"Our Blogs".split(" ").map((char, index) => (
             <motion.span
               key={index}
               initial={{ opacity: 0, y: 10 }}

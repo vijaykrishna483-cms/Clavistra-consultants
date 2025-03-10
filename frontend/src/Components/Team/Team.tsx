@@ -23,7 +23,7 @@ const Team = () => {
         initial={{ opacity: 0, y: 20 }}
         transition={{ duration: 1 }}
       >
-        Meet the team behind the designs
+Meet Our Core Team
       </motion.h1>
 
       {/* Animated Subheading */}
@@ -33,8 +33,8 @@ const Team = () => {
         initial={{ opacity: 0, x: -20 }}
         transition={{ duration: 1.2 }}
       >
-        Our team is comprised of experienced architects, designers, and project managers who share a common goal of creating exceptional spaces.
-      </motion.h1>
+Our Team is comprised of experienced Management consultants, startup leaders, CA Rankers, Lawyer, Marketing Manager & Project Managers who share a common goal of creating exceptional Consulting experiences and delivering results.
+</motion.h1>
 
       {/* Team Cards with whileInView Animation */}
       <div className="flex flex-wrap justify-center gap-10 mt-10">

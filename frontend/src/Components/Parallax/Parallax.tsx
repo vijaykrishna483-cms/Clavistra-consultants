@@ -15,7 +15,9 @@ const CustomParallax = () => {
       >
         <div className="overflow-hidden">
       <div className="relative  md:h-[70vh] flex md:space-x-10 text-white text-lg p-20 min-w-[200vw] animate-scroll">
-        <p  style={{ WebkitTextStroke: "2px white" }} className='border-b border-gray-500/30 font-bold text-3xl md:text-[6vw] text-transparent'>Design Thinking Interior Design Modern Structures Architecture
+        <p  style={{ WebkitTextStroke: "2px white" }} className='border-b border-gray-500/30 font-bold text-3xl md:text-[6vw] text-transparent'>We Ease, Structure, Implement, Deliver Impactful Results
+
+
 </p>
 
         

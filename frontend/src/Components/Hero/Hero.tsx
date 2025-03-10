@@ -16,7 +16,7 @@ const slides = [
   },
   {
     image: Bg2,
-    quote: "Refining and Redefining  Brand",
+    quote: "Refining and Redefining Brands",
     functn: "You have a vision? | We have a solution",    link: "https://www.youtube.com/",
     number:"02",
 
