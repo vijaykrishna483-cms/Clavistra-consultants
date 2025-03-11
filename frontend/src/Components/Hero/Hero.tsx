@@ -102,7 +102,7 @@ const Hero = () => {
         {slides.map((slide, index) => (
           <div
             key={index}
-            className={`absolute pl-[13vw] md:pl-[] text-5xl md:text-8xl font-bold w-[100vw] md:w-[60vw] text-center transition-all duration-[1500ms] ease-in-out ${
+            className={`absolute pl-[13vw] md:pl-[0vw] text-5xl md:text-8xl font-bold w-[100vw] md:w-[60vw] text-center transition-all duration-[1500ms] ease-in-out ${
               index === currentIndex
                 ? "opacity-100 translate-x-0"
                 : "opacity-0 translate-x-30"
