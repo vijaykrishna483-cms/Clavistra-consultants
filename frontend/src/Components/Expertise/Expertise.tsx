@@ -1,10 +1,11 @@
 import {  ArrowUpRight } from "lucide-react";
 import { motion } from "framer-motion";
 // import { useEffect, useState, useRef } from "react";
-import { Lightbulb, Brain, Compass } from "lucide-react";
+import { Brain, Compass } from "lucide-react";
 // import Brand from '../../assets/brand.jpg'
 import { IoIosArrowDroprightCircle } from "react-icons/io";
 import { useNavigate } from "react-router-dom";
+import {  FaCreditCard } from "react-icons/fa"; 
 // interface AnimatedNumberProps {
 //   target: number;
 // }
@@ -38,46 +39,46 @@ import { useNavigate } from "react-router-dom";
 // };
 const services = [
   {
-    title: "Brand Analysis",
+    title: "Brand Building & Analysis",
     text: "Need a voice that speaks right to your audience's heart? That's where we come in!",
     image: "analysis.jpg",
     link: "/brandanalysis",
   },
   {
-    title: "Brand Strategy",
+    title: "Influencer & Performance Marketing",
     text: "We go beyond flashy campaigns to foster innovation and creativity.",
     image: "strategy.jpg",
     link: "/brandstrategy",
   },
   {
-    title: "Social Media Management",
+    title: "Website Development & Management",
     text: "Take your social media game to the next level with our expert management.",
-    image: "social.jpg",
+    image: "https://i.pinimg.com/736x/a1/cb/28/a1cb28275e9281a96b527266d5f62739.jpg",
     link: "/socialmediamanagement",
   },
   {
-    title: "Performance Marketing",
+    title: "Social Media & Design Solution ",
     text: "Maximize your ROI with data-driven marketing strategies.",
-    image: "performance.jpg",
+    image: "social.jpg",
     link: "/performancemarketing",
   },
   {
-    title: "Search Engine Optimization",
+    title: "Content Strategy & Content Creation",
     text: "Transform your online presence with our SEO expertise.",
-    image: "seo.jpg",
+    image: "https://i.pinimg.com/736x/02/f9/b0/02f9b0e9977731b6f2ee027e22edb666.jpg",
     link: "/searchengineoptimization",
   },
   {
-    title: "Website Development & Management",
+    title: "Financial Management & Compliance",
     text: "We craft experiences, not just websites.",
-    image: "webdev.jpg",
+    image: "performance.jpg ",
     link: "/websitedevelopmentmanagement",
   },
 ];
 const Expertise = () => {
   const navigate =useNavigate();
   return (
-    <div className="relative w-[100vw] md:h-[]  mt-[2vh] md:mt-[10vh]">
+    <div  className="relative w-[100vw] md:h-[]  mt-[2vh] md:mt-[10vh]">
       {/* Heading Section */}
       <motion.div 
         initial={{ opacity: 0, y: 50 }}
@@ -112,82 +113,69 @@ const Expertise = () => {
 
 
 
-
-
       <motion.div 
-      initial={{ opacity: 0, y: 50 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      transition={{ duration: 1.5, ease: "easeOut" }}
-      className="md:w-[100vw] py-[5vh] gap-[10vw] px-[10%] md:gap-[10vw] mt-[7vh] flex flex-col md:flex-col items-center justify-center"
-    ><div className="flex flex-row justify-between">
+  initial={{ opacity: 0, y: 50 }}
+  whileInView={{ opacity: 1, y: 0 }}
+  transition={{ duration: 1.5, ease: "easeOut" }}
+  className="md:w-[100vw] py-[5vh] gap-[5vw] px-[10%] md:gap-[10vw] mt-[7vh] flex flex-col md:flex-col items-start md:items-center justify-center"
+>
+  <div className="flex flex-col md:flex-row justify-start gap-[2vw]">
 
-<div className="flex flex-row  w-[30vw] gap-[1vw] align-middle justify-center  items-center text-left space-y-4">
+    <div className="flex flex-row  rounded-2xl w-[90vw] md:w-[30vw] gap-[6vw] md:gap-[1vw] align-middle justify-start items-start text-left space-y-4">
       <motion.div
-          whileHover={{ scale: 1.1 }}
-          transition={{ duration: 0.3, ease: "easeOut" }}
-        >
-          <Compass size={100} className="text-black-500" />
-        </motion.div>        <div className="flex flex-col ">
-
-    
-        <h2 className="text-2xl font-bold">Strategy</h2>
-        <p className="text-gray-600"> Branding & Brand Strategy</p>
-        </div>
+        whileHover={{ scale: 1.1 }}
+        transition={{ duration: 0.3, ease: "easeOut" }}
+      >
+        <Brain size={100} className="text-black-500" />
+      </motion.div>        
+      <div className="flex flex-col">
+        <h2 className="md:text-2xl font-bold">Branding & <br/> Brand Strategy</h2>
       </div>
-
-      {/* Branding Section */}
-      <div className="flex flex-row  w-[30vw] gap-[1vw] align-middle justify-center  items-center text-left space-y-4">
-      <motion.div
-          whileHover={{ scale: 1.1 }}
-          transition={{ duration: 0.3, ease: "easeOut" }}
-        >
-          <Brain size={100} className="text-black-500" />
-        </motion.div>        <div className="flex flex-col ">
-
-        <h2 className="text-2xl font-bold">Branding</h2>
-        <p className="text-gray-600">Finance & Accounting Service</p>
-        </div>
-
-      </div>
-
     </div>
-     
 
-    <div className="flex flex-row justify-between">
-
-
-
-     
-      <div className="flex flex-row  w-[30vw] gap-[1vw] align-middle justify-center  items-center text-left space-y-4">
+    {/* Finance Section */}
+    <div className="flex flex-row  rounded-2xl w-[90vw] md:w-[30vw] gap-[6vw] md:gap-[1vw] align-middle justify-start items-start text-left space-y-4">
       <motion.div
-          whileHover={{ scale: 1.1 }}
-          transition={{ duration: 0.3, ease: "easeOut" }}
-        >
-          <Brain size={100} className="text-black-500" />
-        </motion.div>        <div className="flex flex-col ">
-
-        <h2 className="text-2xl font-bold">Branding</h2>
-        <p className="text-gray-600">Website & IT Solution</p>
-        </div>
-
+        whileHover={{ scale: 1.1 }}
+        transition={{ duration: 0.3, ease: "easeOut" }}
+      >
+        <FaCreditCard className="text-7xl text-black-500" />
+      </motion.div>        
+      <div className="flex flex-col">
+        <h2 className="md:text-2xl font-bold">Finance &<br/> Accounting Service</h2>
       </div>
+    </div>
+  </div>
 
-      {/* Creativity Section */}
-      <div className="flex flex-row  w-[30vw] gap-[1vw] align-middle justify-center  items-center text-left space-y-4">
+  <div className="flex flex-col md:flex-row justify-start gap-[2vw]">
+    {/* Website Section */}
+    <div className="flex flex-row  rounded-2xl w-[90vw] md:w-[30vw] gap-[6vw] md:gap-[1vw] align-middle justify-start items-start text-left space-y-4">
       <motion.div
-          whileHover={{ scale: 1.1 }}
-          transition={{ duration: 0.3, ease: "easeOut" }}
-        >
-          <Lightbulb size={100} className="text-black-500" />
-        </motion.div>        <div className="flex flex-col ">
+        whileHover={{ scale: 1.1 }}
+        transition={{ duration: 0.3, ease: "easeOut" }}
+      >
+        <Brain size={100} className="text-black-500" />
+      </motion.div>        
+      <div className="flex flex-col">
+        <h2 className="md:text-2xl font-bold">Website &<br/> IT Solution</h2>
+      </div>
+    </div>
 
-        <h2 className="text-2xl font-bold">Creativity</h2>
-        <p className="text-gray-600">Market & Digital Presence</p>
+    {/* Market Section */}
+    <div className="flex flex-row  rounded-2xl w-[90vw] md:w-[30vw] gap-[6vw] md:gap-[1vw] align-middle justify-start items-start text-left space-y-4">
+      <motion.div
+        whileHover={{ scale: 1.1 }}
+        transition={{ duration: 0.3, ease: "easeOut" }}
+      >
+        <Compass size={100} className="text-black-500" />
+      </motion.div>        
+      <div className="flex flex-col">
+        <h2 className="md:text-2xl font-bold">Market &<br/> Digital Presence</h2>
       </div>
-      </div>
-      </div>
+    </div>
+  </div>
+</motion.div>
 
-    </motion.div>
       {/* Services Section */}
       <motion.div 
         initial={{ opacity: 0, y: 50 }}
@@ -259,7 +247,7 @@ const Expertise = () => {
         </div>
       </motion.div> */}
 
-<div>
+<div id="our-services" >
   {/* Animated Heading */}
   <motion.div 
     initial={{ opacity: 0, y: 50 }}
@@ -272,52 +260,46 @@ const Expertise = () => {
     </h1>
   </motion.div>
   <div className="w-full px-[10%] py-[9vh] grid grid-cols-1 md:grid-cols-3 gap-8">
-      {services.map((service, index) => (
-        <motion.div
-          key={index}
-          onClick={() => navigate(service.link)}
-          initial={{ opacity: 0, y: 50, scale: 0.9 }}
-          whileInView={{ opacity: 1, y: 0, scale: 1 }}
-          transition={{ duration: 0.5, ease: "easeOut" }}
-          whileHover={{ y: -10, boxShadow: "0px 10px 30px rgba(0,0,0,0.1)" }}
-          className="relative h-[40vh] md:h-[63vh] rounded-2xl w-full bg-cover bg-center cursor-pointer flex items-end p-6 overflow-hidden"
-          style={{ backgroundImage: `url(${service.image})` }}
-        >
-          {/* Dark overlay */}
-          <div className="absolute inset-0  flex flex-row justify-aroundtransition-opacity duration-300 " />
-          
-          {/* Rotating Cube Animation for Title */}
-          {/* <motion.div
-            initial={{ rotateY: 0 }}
-            whileHover={{ rotateY: 180 }}
-            transition={{ duration: 0.6 }}
-            className=" bottom-6 uppercase left-6 text-white text-md font-lighter underline"
-          >
-          
-          </motion.div> */}
-          
-          {/* Text content with hover change */}
-          <motion.div 
-            className="relative z-10 text-white"
-          
-          >
-            <h2 className="text-2xl font-bold">{service.title}</h2>
-            <p className="text-sm mt-2 w-[80%]">{service.text}</p>
-            <p className="text-sm mt-2 w-[80%] uppercase left-6 text-white text-md font-lighter underline">  Explore {service.title}</p>
+  {services.map((service, index) => (
+    <motion.div
+      key={index}
+      onClick={() => navigate(service.link)}
+      initial={{ opacity: 0, y: 50, scale: 0.9 }}
+      whileInView={{ opacity: 1, y: 0, scale: 1 }}
+      transition={{ duration: 0.5, ease: "easeOut" }}
+      whileHover={{ y: -10, boxShadow: "0px 10px 30px rgba(0,0,0,0.1)" }}
+      className="relative h-[55vh] md:h-[63vh] rounded-2xl w-full bg-cover bg-center cursor-pointer flex items-end p-6 overflow-hidden"
+      style={{ backgroundImage: `url(${service.image})` }}
+    >
+      {/* Dark overlay with blur effect */}
+   
 
-          </motion.div>
+      {/* Text content */}
+      <motion.div className="relative z-10 text-white">
+        <h2 className="md:text-2xl text-xl font-bold">{service.title}</h2>
+        <p className="md:text-sm md:mt-2 w-[80%]">{service.text}</p>
+        <p className="md:mt-2 w-[80%] uppercase left-6 text-white md:text-md text-xs font-lighter underline">
+          Explore {service.title}
+        </p>
+      </motion.div>
+      <motion.div
+        className="absolute inset-0 bg-[#0b0b0b1d] bg-opacity-50 transition-all duration-300 ease-in-out"
+        style={{
+          opacity: 0,
+          backdropFilter: 'blur(10px)',
           
-          {/* Arrow Icon with hover animation */}
-          <motion.div
-            className=" bottom-4 right-4    duration-300"
-        
-          >
-            <IoIosArrowDroprightCircle className="text-7xl font-light text-[#ffffff]"/>
-            
-          </motion.div>
-        </motion.div>
-      ))}
-    </div>
+        }}
+        // Apply opacity change on hover for the blur effect
+        whileHover={{ opacity: 1 }}
+      />
+      {/* Arrow Icon with hover animation */}
+      <motion.div className="bottom-4 right-4 duration-300 z-20">
+        <IoIosArrowDroprightCircle className="text-7xl font-light text-[#ffffff]" />
+      </motion.div>
+    </motion.div>
+  ))}
+</div>
+
  </div>
     </div>
   );

@@ -1,14 +1,14 @@
 import { motion } from 'framer-motion'
 import { ArrowUpRight } from 'lucide-react'
 
-import Bg1 from "../../assets/office.jpg";
+// import Bg1 from "../../assets/office.jpg";
 import Bg2 from "../../assets/bg2.jpg";
-import Bg3 from "../../assets/bg3.jpg";
+// import Bg3 from "../../assets/bg3.jpg";
 import { useEffect, useState } from 'react';
 
 const slides = [
     {
-      image: Bg1,
+      image: Bg2,
       quote: "Coming Soon",
      
     },
@@ -19,7 +19,7 @@ const slides = [
   
     },
     {
-      image: Bg3,
+      image: Bg2,
       quote: "Coming Soon",
     
   
@@ -50,7 +50,7 @@ const projects = () => {
       // };
       
   return (
-    <div className="w-[100vw] h-full  mt-[30vh]">
+    <div id='our-work' className="w-[100vw] h-full  mt-[30vh]">
     {/* About Us */}
     <div className=' px-[6%] md:px-[10%]'>
     <motion.div 
@@ -126,7 +126,7 @@ At Clavistra Consulting, we go beyond strategy—we deliver tailored solutions t
         {slides.map((slide, index) => (
           <div
             key={index}
-            className={`absolute text-5xl md:text-8xl font-bold w-[100vw] md:w-[60vw] text-center transition-all duration-[1500ms] ease-in-out ${
+            className={`absolute pl-[20vw] md:pl-[0vw] text-5xl md:text-8xl font-bold w-[100vw] md:w-[60vw] text-center transition-all duration-[1500ms] ease-in-out ${
               index === currentIndex ? "opacity-100 translate-x-0" : "opacity-0 translate-x-30"
             }`}
           >

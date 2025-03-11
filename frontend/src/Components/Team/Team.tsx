@@ -36,9 +36,9 @@ Our Team is comprised of experienced Management consultants, startup leaders, CA
 
 
 <div className="container mt-[8vh]">
-  <div className="row flex justify-around gap-[2vw]">
-    <div className=" flex ">
-      <div className="our-team shadow-xl rounded-2xl">
+  <div className="row flex md:flex-row flex-col justify-around gap-[2vw]">
+    <div className="col-12 col-sm-6 col-md-4 col-lg-3">
+      <div className="our-team md:w-[18vw] w-[80vw] shadow-xl rounded-2xl">
         <div className="picture">
           <img className="img-fluid" src="https://picsum.photos/130/130?image=1027"/>
         </div>
@@ -55,7 +55,7 @@ Our Team is comprised of experienced Management consultants, startup leaders, CA
       </div>
     </div>
         <div className="col-12 col-sm-6 col-md-4 col-lg-3">
-      <div className="our-team shadow-xl rounded-2xl">
+      <div className="our-team md:w-[18vw] w-[80vw] shadow-xl rounded-2xl">
         <div className="picture">
           <img className="img-fluid" src="https://picsum.photos/130/130?image=839"/>
         </div>
@@ -72,7 +72,7 @@ Our Team is comprised of experienced Management consultants, startup leaders, CA
       </div>
     </div>
         <div className="col-12 col-sm-6 col-md-4 col-lg-3">
-      <div className="our-team shadow-xl rounded-2xl">
+      <div className="our-team md:w-[18vw] w-[80vw] shadow-xl rounded-2xl">
         <div className="picture">
           <img className="img-fluid" src="https://picsum.photos/130/130?image=856"/>
         </div>
@@ -89,7 +89,7 @@ Our Team is comprised of experienced Management consultants, startup leaders, CA
       </div>
     </div>
         <div className="col-12 col-sm-6 col-md-4 col-lg-3">
-      <div className="our-team shadow-xl rounded-2xl">
+      <div className="our-team md:w-[18vw] w-[80vw] shadow-xl rounded-2xl">
         <div className="picture">
           <img className="img-fluid" src="https://picsum.photos/130/130?image=836"/>
         </div>

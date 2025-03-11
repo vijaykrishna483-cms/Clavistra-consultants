@@ -1,38 +1,46 @@
 import { useState, useEffect } from "react";
-import { ChevronRight, ChevronLeft, X } from "lucide-react";
-import Bg1 from "../../assets/office.jpg";
-import Bg2 from "../../assets/bg2.jpg";
-import Bg3 from "../../assets/bg3.jpg";
-import Navbar from "../Navbar/Navbar";
-import { PhoneCall } from "lucide-react";
-import { Facebook, Twitter, Instagram } from "lucide-react";
+import { ChevronRight, ChevronLeft } from "lucide-react";
 
+import Navbar from "../Navbar/Navbar";
+// import { PhoneCall } from "lucide-react";
+// import { Facebook, Twitter, Instagram } from "lucide-react";
+import {  PhoneCall, X } from "lucide-react";
 import "./Hero.css";
 const slides = [
   {
-    image: Bg1,
+    image: "https://images.unsplash.com/photo-1553877522-43269d4ea984?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     quote: "Transforming Your Vision to Reality",
-    functn: "You have a vision? | We have a solution",
+    // functn: "You have a vision? | We have a solution",
     link: "https://www.youtube.com/",
     number: "01",
   },
   {
-    image: Bg2,
+    image: "https://images.unsplash.com/photo-1423784346385-c1d4dac9893a?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     quote: "Refining and Redefining Brands",
-    functn: "You have a vision? | We have a solution",
+    // functn: "You have a vision? | We have a solution",
     link: "https://www.youtube.com/",
     number: "02",
   },
+ 
   {
-    image: Bg3,
+    image: "https://images.unsplash.com/photo-1514108225820-2b602873ac36?q=80&w=1931&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    quote: "We Implement & Deliver Results",
+    // functn: "You have a vision? | We have a solution",
+    link: "https://www.youtube.com/",
+    number: "03",
+  },
+  {
+    image: "https://images.unsplash.com/photo-1582578598774-a377d4b32223?q=80&w=2071&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     quote: "Let's Get started",
-    functn: "You have a vision? | We have a solution",
+    // functn: "You have a vision? | We have a solution",
     link: "https://www.youtube.com/",
     number: "03",
   },
 ];
 
+
 const Hero = () => {
+  const [isVisible, setIsVisible] = useState(true);
   const [showPopup, setShowPopup] = useState(false);
   const [currentIndex, setCurrentIndex] = useState(0);
 
@@ -60,7 +68,7 @@ const Hero = () => {
   };
 
   return (
-    <div className="relative h-screen w-full overflow-x-hidden">
+    <div id="home" className="relative min-h-screen w-full overflow-x-hidden">
       <Navbar />
 
       {/* Background Images */}
@@ -94,7 +102,7 @@ const Hero = () => {
         {slides.map((slide, index) => (
           <div
             key={index}
-            className={`absolute text-5xl md:text-8xl font-bold w-[100vw] md:w-[60vw] text-center transition-all duration-[1500ms] ease-in-out ${
+            className={`absolute pl-[13vw] md:pl-[] text-5xl md:text-8xl font-bold w-[100vw] md:w-[60vw] text-center transition-all duration-[1500ms] ease-in-out ${
               index === currentIndex
                 ? "opacity-100 translate-x-0"
                 : "opacity-0 translate-x-30"
@@ -122,34 +130,33 @@ const Hero = () => {
       </div>
 
       {/* Function Text Box */}
-      <div className="fixed justify-center align-middle   z-100 md:w-[25vw] rounded-2xl top-[94vh] w-[56vw] flex flex-row   items-center shadow-3xl h-[20vh]  left-[44vw] md:left-[72vw] md:top-[70vh]">
-        <div className="flex justify-baseline gap-[5px]">
-          <div className="w-[20vw] flex flex-row rounded-2xl shadow-2xl bg-white h-[30vh] items-center justify-center gap-4">
-            <div className="flex flex-col gap-[1vh] justify-center">
-              <p className="text-xl text-light text-center">
-                Have an Idea in Mind? <br />{" "}
-              </p>
-              <p className="text-xl text-light text-center">
-                {" "}
-                We are Here To Help You..! <br />{" "}
-              </p>
-
-              <button className="w-[110%] h-[50px] text-black rounded-3xl px-[5%] bg-transparent hover:bg-gray-100 border-1 font-extralight  border-gray-500 text-lg  text-center shadow-md transition-all duration-300 ease-in-out transform hover:scale-105 hover:shadow-lg active:scale-95">
+      <div className="fixed justify-center align-middle z-100 md:w-fit rounded-2xl top-[94vh] w flex flex-row items-center shadow-3xl h-[20vh] left-[44vw] md:left-[75vw] md:top-[80vh]">
+      <div className="flex  place-items-center  gap-[1vw]">
+        {isVisible && (
+          <div className="w-[] flex flex-row rounded-2xl  shadow-2xl bg-transparent h-[] items-center justify-center gap-4 relative">
+            {/* <button
+              className="absolute top-2 right-2 p-2 bg-gray-200 rounded-full hover:bg-gray-300 transition-all"
+              onClick={() => setIsVisible(false)}
+            >
+              <X size={20} />
+            </button> */}
+            <div className="flex flex-col gap-[1vh] justify-center w-fit">
+        
+              <button className="w-[16vw] h-[50px] text-white hover:text-black rounded-3xl px-[15%] bg-transparent hover:bg-gray-100 border-1 font-extralight border-gray-500 text-lg text-center shadow-md transition-all duration-300 ease-in-out transform hover:scale-105 hover:shadow-lg active:scale-95">
                 Book A Call With Us..!
               </button>
-              <div className="flex justify-center gap-[2vw]">
-                {" "}
-                <Facebook className="text-2xl transition-all duration-300 ease-in-out transform hover:scale-105 hover:shadow-lg active:scale-95"/> 
-                <Twitter className="text-2xl  transition-all duration-300 ease-in-out transform hover:scale-105 hover:shadow-lg active:scale-95"/> 
-                <Instagram className="text-2xl  transition-all duration-300 ease-in-out transform hover:scale-105 hover:shadow-lg active:scale-95"/>
-              </div>
+
             </div>
           </div>
-          <div className="bg-green-500 rounded-full p-5  h-[65px] shadow-lg transition-all duration-300 ease-in-out transform hover:scale-110 hover:shadow-xl hover:bg-green-600 active:scale-90 animate-pulse">
-            <PhoneCall size={28} className="text-white" />
-          </div>
+        )}
+<div
+          className="bg-green-500 rounded-full p-5 h-[65px] shadow-lg transition-all duration-300 ease-in-out transform hover:scale-110 hover:shadow-xl hover:bg-green-600 active:scale-90 animate-pulse cursor-pointer"
+          onClick={() => setIsVisible(true)}
+        >
+          <PhoneCall size={28} className="text-white" />
         </div>
       </div>
+    </div>
 
       {/* Navigation Dots */}
       <div className="absolute bottom-20 left-[5vw] transform -translate-x-1/2 flex flex-col space-y-3 z-40">

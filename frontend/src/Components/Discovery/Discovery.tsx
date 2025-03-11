@@ -19,12 +19,12 @@
       {
         title: "Vision",
         content:
-          "HIDECOR visualises a world where workspaces are redefined for the people, blending aesthetics with eco-conscious well-being. Our goal is to be at the forefront of the industry, delivering exceptional value and garnering deep respect for our innovative designs and absolute professionalism for our peers, partners and team members alike",
+          "We envision a business world where companies, regardless of size, can access holistic, world-class consulting that goes beyond theory. A world where strategy, execution, technology, and finance aren’t separate compartments, but parts of one unified growth engine. Our vision is to be the driving force behind the next generation of sustainable, high-impact businesses — helping them move from confusion to clarity, from complexity to simplicity, and from stagnation to scale. We want to become the most trusted partners — not just as consultants, but as CO-BUILDERS of their journey. Whether it’s a startup taking its first step or an enterprise pivoting for future relevance, we aim to be their compass, their catalyst, and their quiet strength behind the scenes. Our long-term vision is to build a consulting ecosystem that mentors, accelerates, and empowers — not just clients, but even young talent and future entrepreneurs. We want to be remembered not for the services we offered, but for the IMPACT WE CREATED ",
       },
       {
         title: "Mission",
         content:
-          "At HIDECOR, we aspire for Functional efficiency, Aesthetic appeal, Sustainable yet Technology enriched in Design. Our unwavering Ethical standards, Quality craftsmanship, and Client delight in the execution of Build are the core of our organization and reflects our mission to be the foremost interior design partner for our clients and associates. Our approach is rooted in a deep understanding of our clients' needs and the context in which we are designing, fostering company culture, brand, employee wellness.",
+          "Our mission is to solve business problems with heart, mind, and method — combining strategic thinking, tech innovation, financial wisdom, and actionable marketing intelligence. We don't deliver decks; WE DELIVER OUTCOMES. Every project we take up is an opportunity to create tangible business value, uplift processes, and make our clients stronger than yesterday. We aim to simplify complexity. Whether it’s a tech roadmap, a go-to-market strategy, an operational bottleneck, or a finance-led growth challenge — we break it down, solve it from the inside, and build systems that scale. Our mission is to make our clients future-ready — with agility, resilience, and clear direction. And most importantly, we are mission-driven to keep it ethical, personal, and purposeful. We want to be the kind of consultants who don’t just impress — but genuinely transform, inspire, and stand by our clients as partners who care. ",
       },
     ];
   
@@ -36,7 +36,7 @@
     ];
   
     return (
-      <div className="w-[100vw] h-full px-[10%] md:px-[10%]">
+      <div id="about-us" className="w-[100vw] h-full px-[10%] md:px-[10%]">
         {/* About Us */}
         <motion.div 
           className="flex w-full items-end justify-end text-lg"
@@ -101,19 +101,19 @@
   
           {/* Text Sections */}
           <motion.div
-            className="md:w-[50%]"
+            className="md:w-[50%] w-[95%] mx-[5%]"
             initial={{ opacity: 0, x: 30 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 1.5 }}
           >
-            <div className="flex flex-col items-left w-full max-w-2xl mx-auto">
+            <div className="flex flex-col items-left  ">
               {/* Tabs */}
-              <div className="flex relative gap-4 mb-4">
+              <div className="flex relative gap-4 mb-4 ">
                 {sections.map((section, index) => (
                   <button
                     key={index}
                     className={`px-4 py-2 border-b-2 ${
-                      activeIndex === index ? "border-black text-2xl font-semibold" : "border-gray-100 text-[#838282] text-2xl font-semibold"
+                      activeIndex === index ? "border-black md:text-2xl font-semibold" : "border-gray-100 text-[#838282] md:text-2xl font-semibold"
                     }`}
                     onClick={() => setActiveIndex(index)}
                   >
@@ -129,7 +129,7 @@
                 animate={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0, y: -10 }}
                 transition={{ duration: 0.3 }}
-                className="text-left text-gray-700 w-[90%] text-lg"
+                className="text-left text-gray-700 w-[100%] md:text-lg"
               >
                 <p>{sections[activeIndex].content}</p>
               </motion.div>

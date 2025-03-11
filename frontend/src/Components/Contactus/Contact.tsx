@@ -102,14 +102,14 @@ const Contact = () => {
               transition={{ duration: 1 }}
               viewport={{ once: true }}
             >
-              Do not hesitate to say{" "}
+              Say{" "}
               <motion.span
                 key={index} // Key change triggers re-animation
                 initial={{ opacity: 0, y: 10 }}
                 animate={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0, y: -10 }}
                 transition={{ duration: 0.5 }}
-                className="text-[#a6a4a4]"
+                className="text-[#ffffff]"
               >
                 {words[index]}
               </motion.span>
