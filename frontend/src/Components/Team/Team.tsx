@@ -1,17 +1,12 @@
 import { Facebook, Twitter, Instagram, Linkedin } from "lucide-react";
-import Team1 from "../../assets/team1.png";
-import Team2 from "../../assets/team2.png";
-import Team3 from "../../assets/team3.png";
-import Team4 from "../../assets/team4.png";
+// import Team1 from "../../assets/team1.png";
+// import Team2 from "../../assets/team2.png";
+// import Team3 from "../../assets/team3.png";
+// import Team4 from "../../assets/team4.png";
 import './Team.css'
 import { motion } from "framer-motion";
 
-const teamMembers = [
-  { id: 1, name: "John Doe", role: "UI/UX Designer", img: Team1 },
-  { id: 2, name: "Jane Smith", role: "Project Manager", img: Team2 },
-  { id: 3, name: "Michael Brown", role: "Architect", img: Team3 },
-  { id: 4, name: "Emily Davis", role: "Interior Designer", img: Team4 },
-];
+
 
 const Team = () => {
   return (
@@ -36,35 +31,84 @@ Meet Our Core Team
 Our Team is comprised of experienced Management consultants, startup leaders, CA Rankers, Lawyer, Marketing Manager & Project Managers who share a common goal of creating exceptional Consulting experiences and delivering results.
 </motion.h1>
 
-      {/* Team Cards with whileInView Animation */}
-      <div className="flex flex-wrap justify-center gap-10 mt-10">
-        {teamMembers.map((member, index) => (
-          <motion.div
-            key={member.id}
-            className="team-card"
-            whileInView={{ opacity: 1, y: 0 }}
-            initial={{ opacity: 0, y: 50 }}
-            transition={{ duration: 0.8, delay: index * 0.2 }}
-          >
-            {/* Image */}
-            <img src={member.img} alt={member.name} className="team-image" />
 
-            {/* Hover Effect - White Overlay */}
-            <div className="overlay">
-              <p className="name">{member.name}</p>
-              <p className="role">{member.role}</p>
 
-              {/* Social Media Icons */}
-              <div className="icons">
-                <Facebook size={20} className="icon" />
-                <Twitter size={20} className="icon" />
-                <Instagram size={20} className="icon" />
-                <Linkedin size={20} className="icon" />
-              </div>
-            </div>
-          </motion.div>
-        ))}
+
+
+<div className="container mt-[8vh]">
+  <div className="row flex justify-around gap-[2vw]">
+    <div className=" flex ">
+      <div className="our-team shadow-xl rounded-2xl">
+        <div className="picture">
+          <img className="img-fluid" src="https://picsum.photos/130/130?image=1027"/>
+        </div>
+        <div className="team-content">
+          <h3 className="name">Michele Miller</h3>
+          <h4 className="title">Web Developer</h4>
+        </div>
+        <ul className="social flex gap-[10px] justify-around py-[4px]">
+          <li><Facebook className="text-white"/></li>
+          <li><Twitter className="text-white"/></li>
+          <li><Instagram className="text-white"/></li>
+          <li><Linkedin className="text-white"/></li>
+        </ul>
       </div>
+    </div>
+        <div className="col-12 col-sm-6 col-md-4 col-lg-3">
+      <div className="our-team shadow-xl rounded-2xl">
+        <div className="picture">
+          <img className="img-fluid" src="https://picsum.photos/130/130?image=839"/>
+        </div>
+        <div className="team-content">
+          <h3 className="name">Patricia Knott</h3>
+          <h4 className="title">Web Developer</h4>
+        </div>
+        <ul className="social flex gap-[10px] justify-around py-[4px]">
+          <li><Facebook className="text-white"/></li>
+          <li><Twitter className="text-white"/></li>
+          <li><Instagram className="text-white"/></li>
+          <li><Linkedin className="text-white"/></li>
+        </ul>
+      </div>
+    </div>
+        <div className="col-12 col-sm-6 col-md-4 col-lg-3">
+      <div className="our-team shadow-xl rounded-2xl">
+        <div className="picture">
+          <img className="img-fluid" src="https://picsum.photos/130/130?image=856"/>
+        </div>
+        <div className="team-content">
+          <h3 className="name">Justin Ramos</h3>
+          <h4 className="title">Web Developer</h4>
+        </div>
+       <ul className="social flex gap-[10px] justify-around py-[4px]">
+          <li><Facebook className="text-white"/></li>
+          <li><Twitter className="text-white"/></li>
+          <li><Instagram className="text-white"/></li>
+          <li><Linkedin className="text-white"/></li>
+        </ul>
+      </div>
+    </div>
+        <div className="col-12 col-sm-6 col-md-4 col-lg-3">
+      <div className="our-team shadow-xl rounded-2xl">
+        <div className="picture">
+          <img className="img-fluid" src="https://picsum.photos/130/130?image=836"/>
+        </div>
+        <div className="team-content">
+          <h3 className="name">Mary Huntley</h3>
+          <h4 className="title">Web Developer</h4>
+        </div>
+       <ul className="social flex gap-[10px] justify-around py-[4px]">
+          <li><Facebook className="text-white"/></li>
+          <li><Twitter className="text-white"/></li>
+          <li><Instagram className="text-white"/></li>
+          <li><Linkedin className="text-white"/></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+
     </div>
   );
 };

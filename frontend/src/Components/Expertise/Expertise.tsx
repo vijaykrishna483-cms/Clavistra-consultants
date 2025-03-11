@@ -1,8 +1,9 @@
-import { ArrowUpRight } from "lucide-react";
+import {  ArrowUpRight } from "lucide-react";
 import { motion } from "framer-motion";
 // import { useEffect, useState, useRef } from "react";
 import { Lightbulb, Brain, Compass } from "lucide-react";
-import Brand from '../../assets/brand.jpg'
+// import Brand from '../../assets/brand.jpg'
+import { IoIosArrowDroprightCircle } from "react-icons/io";
 import { useNavigate } from "react-router-dom";
 // interface AnimatedNumberProps {
 //   target: number;
@@ -35,7 +36,44 @@ import { useNavigate } from "react-router-dom";
 //     </span>
 //   );
 // };
-
+const services = [
+  {
+    title: "Brand Analysis",
+    text: "Need a voice that speaks right to your audience's heart? That's where we come in!",
+    image: "analysis.jpg",
+    link: "/brandanalysis",
+  },
+  {
+    title: "Brand Strategy",
+    text: "We go beyond flashy campaigns to foster innovation and creativity.",
+    image: "strategy.jpg",
+    link: "/brandstrategy",
+  },
+  {
+    title: "Social Media Management",
+    text: "Take your social media game to the next level with our expert management.",
+    image: "social.jpg",
+    link: "/socialmediamanagement",
+  },
+  {
+    title: "Performance Marketing",
+    text: "Maximize your ROI with data-driven marketing strategies.",
+    image: "performance.jpg",
+    link: "/performancemarketing",
+  },
+  {
+    title: "Search Engine Optimization",
+    text: "Transform your online presence with our SEO expertise.",
+    image: "seo.jpg",
+    link: "/searchengineoptimization",
+  },
+  {
+    title: "Website Development & Management",
+    text: "We craft experiences, not just websites.",
+    image: "webdev.jpg",
+    link: "/websitedevelopmentmanagement",
+  },
+];
 const Expertise = () => {
   const navigate =useNavigate();
   return (
@@ -80,10 +118,10 @@ const Expertise = () => {
       initial={{ opacity: 0, y: 50 }}
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 1.5, ease: "easeOut" }}
-      className="md:w-[100vw] py-[5vh] gap-[10vw] px-[10%] md:gap-[10vw] mt-[7vh] flex flex-col md:flex-row items-center justify-center"
-    >
-      {/* Strategy Section */}
-      <div className="flex flex-row  w-[30vw] gap-[1vw] align-middle justify-center  items-center text-left space-y-4">
+      className="md:w-[100vw] py-[5vh] gap-[10vw] px-[10%] md:gap-[10vw] mt-[7vh] flex flex-col md:flex-col items-center justify-center"
+    ><div className="flex flex-row justify-between">
+
+<div className="flex flex-row  w-[30vw] gap-[1vw] align-middle justify-center  items-center text-left space-y-4">
       <motion.div
           whileHover={{ scale: 1.1 }}
           transition={{ duration: 0.3, ease: "easeOut" }}
@@ -93,7 +131,7 @@ const Expertise = () => {
 
     
         <h2 className="text-2xl font-bold">Strategy</h2>
-        <p className="text-gray-600">Brand Strategy</p>
+        <p className="text-gray-600"> Branding & Brand Strategy</p>
         </div>
       </div>
 
@@ -107,7 +145,29 @@ const Expertise = () => {
         </motion.div>        <div className="flex flex-col ">
 
         <h2 className="text-2xl font-bold">Branding</h2>
-        <p className="text-gray-600">Brand Architecture</p>
+        <p className="text-gray-600">Finance & Accounting Service</p>
+        </div>
+
+      </div>
+
+    </div>
+     
+
+    <div className="flex flex-row justify-between">
+
+
+
+     
+      <div className="flex flex-row  w-[30vw] gap-[1vw] align-middle justify-center  items-center text-left space-y-4">
+      <motion.div
+          whileHover={{ scale: 1.1 }}
+          transition={{ duration: 0.3, ease: "easeOut" }}
+        >
+          <Brain size={100} className="text-black-500" />
+        </motion.div>        <div className="flex flex-col ">
+
+        <h2 className="text-2xl font-bold">Branding</h2>
+        <p className="text-gray-600">Website & IT Solution</p>
         </div>
 
       </div>
@@ -122,7 +182,8 @@ const Expertise = () => {
         </motion.div>        <div className="flex flex-col ">
 
         <h2 className="text-2xl font-bold">Creativity</h2>
-        <p className="text-gray-600">Digital Strategy</p>
+        <p className="text-gray-600">Market & Digital Presence</p>
+      </div>
       </div>
       </div>
 
@@ -135,7 +196,7 @@ const Expertise = () => {
         className="text-sm text-[#333333] w-[100%] py-[vh] md:items-center items-start justify-center flex md:flex-row flex-col"
       >
        
-    <div className='text-sm  text-[#333333] w-[90%] px-[4%] py-[5vh] md:items-center items-start justify-center flex md:flex-row flex-col'>
+    {/* <div className='text-sm  text-[#333333] w-[90%] px-[4%] py-[5vh] md:items-center items-start justify-center flex md:flex-row flex-col'>
           
           <div className='md:w-[30%] flex flex-col justify-center items-center'>
             <p className='flex justify-center items-center align-middle font-bold '><span className='font-bold text-3xl mb-[2px] mr-[5px]'>+</span> Branding & Brand Strategy</p>
@@ -158,7 +219,7 @@ const Expertise = () => {
           </div>
 
 
-    </div>
+    </div> */}
       </motion.div>
 
       {/* Statistics Section */}
@@ -198,9 +259,6 @@ const Expertise = () => {
         </div>
       </motion.div> */}
 
-
-
-
 <div>
   {/* Animated Heading */}
   <motion.div 
@@ -213,127 +271,54 @@ const Expertise = () => {
       What We Have to Offer
     </h1>
   </motion.div>
+  <div className="w-full px-[10%] py-[9vh] grid grid-cols-1 md:grid-cols-3 gap-8">
+      {services.map((service, index) => (
+        <motion.div
+          key={index}
+          onClick={() => navigate(service.link)}
+          initial={{ opacity: 0, y: 50, scale: 0.9 }}
+          whileInView={{ opacity: 1, y: 0, scale: 1 }}
+          transition={{ duration: 0.5, ease: "easeOut" }}
+          whileHover={{ y: -10, boxShadow: "0px 10px 30px rgba(0,0,0,0.1)" }}
+          className="relative h-[40vh] md:h-[63vh] rounded-2xl w-full bg-cover bg-center cursor-pointer flex items-end p-6 overflow-hidden"
+          style={{ backgroundImage: `url(${service.image})` }}
+        >
+          {/* Dark overlay */}
+          <div className="absolute inset-0  flex flex-row justify-aroundtransition-opacity duration-300 " />
+          
+          {/* Rotating Cube Animation for Title */}
+          {/* <motion.div
+            initial={{ rotateY: 0 }}
+            whileHover={{ rotateY: 180 }}
+            transition={{ duration: 0.6 }}
+            className=" bottom-6 uppercase left-6 text-white text-md font-lighter underline"
+          >
+          
+          </motion.div> */}
+          
+          {/* Text content with hover change */}
+          <motion.div 
+            className="relative z-10 text-white"
+          
+          >
+            <h2 className="text-2xl font-bold">{service.title}</h2>
+            <p className="text-sm mt-2 w-[80%]">{service.text}</p>
+            <p className="text-sm mt-2 w-[80%] uppercase left-6 text-white text-md font-lighter underline">  Explore {service.title}</p>
 
-  {/* Services Section */}
-  <div className="w-full py-[9vh] flex flex-row mt-[5vh] px-[10%]">
-    {/* Column 1 */}
-    <div className="w-[35%] border-r-2 border-[#b9b8b8] flex flex-col">
-      <motion.div
-       onClick={() => navigate("/brandanalysis")}
-        initial={{ opacity: 0, y: 50, scale: 0.9 }}
-        whileInView={{ opacity: 1, y: 0, scale: 1 }}
-        transition={{ duration: 0.5, ease: "easeOut" }}
-        whileHover={{ scale: 1.05, y: -10, boxShadow: "0px 10px 30px rgba(0,0,0,0.1)" }}
-        className="flex flex-col justify-start gap-[4vh] py-[4vh] px-[2vw]"
-      >
-        <h2 className="text-3xl font-medium">Brand Analysis</h2>
-        <p>Need a voice that speaks right to your audience's heart? That's where we come in! Our advertising campaigns are like a megaphone for your brand</p>
-        <motion.img 
-          src={Brand} 
-          className="border-2 border-[#cac3c3]" 
-          whileHover={{ scale: 1.1, rotate: 2 }}
-        />
-      </motion.div>
-
-      <motion.div
-             onClick={() => navigate("/brandstrategy")}
-
-        initial={{ opacity: 0, y: 50, scale: 0.9 }}
-        whileInView={{ opacity: 1, y: 0, scale: 1 }}
-        transition={{ duration: 0.5, ease: "easeOut" }}
-        whileHover={{ scale: 1.05, y: -10, boxShadow: "0px 10px 30px rgba(0,0,0,0.1)" }}
-        className="flex flex-col justify-start gap-[4vh] py-[4vh] px-[2vw]"
-      >
-        <h2 className="text-3xl font-medium">Brand Strategy</h2>
-        <p>Our efforts extend beyond mere flashy campaigns and superficial metrics. They revolve around problem-solving, fostering innovation, embracing creativity</p>
-        <motion.img 
-          src="sss.jpg" 
-          className="border-2 border-[#cac3c3]" 
-          whileHover={{ scale: 1.1, rotate: -2 }}
-        />
-      </motion.div>
+          </motion.div>
+          
+          {/* Arrow Icon with hover animation */}
+          <motion.div
+            className=" bottom-4 right-4    duration-300"
+        
+          >
+            <IoIosArrowDroprightCircle className="text-7xl font-light text-[#ffffff]"/>
+            
+          </motion.div>
+        </motion.div>
+      ))}
     </div>
-
-    {/* Column 2 */}
-    <div className="w-[35%] border-r-2 border-[#b9b8b8] flex flex-col">
-      <motion.div
-                   onClick={() => navigate("/socialmediamanagement")}
-
-        initial={{ opacity: 0, y: 50, scale: 0.9 }}
-        whileInView={{ opacity: 1, y: 0, scale: 1 }}
-        transition={{ duration: 0.5, ease: "easeOut" }}
-        whileHover={{ scale: 1.05, y: -10, boxShadow: "0px 10px 30px rgba(0,0,0,0.1)" }}
-        className="flex flex-col justify-start gap-[4vh] py-[4vh] px-[2vw]"
-      >
-        <h2 className="text-3xl font-medium">Social Media Management</h2>
-        <p>Get ready to embark on a social media journey that truly sets your brand apart – with Bluefrogs Agency Social Media Management.
-        </p>
-        <motion.img 
-          src={Brand} 
-          className="border-2 border-[#cac3c3]" 
-          whileHover={{ scale: 1.1, rotate: 2 }}
-        />
-      </motion.div>
-
-      <motion.div
-                   onClick={() => navigate("/performancemarketing")}
-
-        initial={{ opacity: 0, y: 50, scale: 0.9 }}
-        whileInView={{ opacity: 1, y: 0, scale: 1 }}
-        transition={{ duration: 0.5, ease: "easeOut" }}
-        whileHover={{ scale: 1.05, y: -10, boxShadow: "0px 10px 30px rgba(0,0,0,0.1)" }}
-        className="flex flex-col justify-start gap-[4vh] py-[4vh] px-[2vw]"
-      >
-        <h2 className="text-3xl font-medium">Performance Marketing</h2>
-        <p>We combine purpose-driven storytelling and data-driven marketing strategies to enhance brand recall and maximize your ROI.</p>
-        <motion.img 
-          src={Brand} 
-          className="border-2 border-[#cac3c3]" 
-          whileHover={{ scale: 1.1, rotate: -2 }}
-        />
-      </motion.div>
-    </div>
-
-    {/* Column 3 */}
-    <div className="w-[35%] border-r-2 border-[#b9b8b8] flex flex-col">
-      <motion.div
-                   onClick={() => navigate("/searchengineoptimization")}
-
-        initial={{ opacity: 0, y: 50, scale: 0.9 }}
-        whileInView={{ opacity: 1, y: 0, scale: 1 }}
-        transition={{ duration: 0.5, ease: "easeOut" }}
-        whileHover={{ scale: 1.05, y: -10, boxShadow: "0px 10px 30px rgba(0,0,0,0.1)" }}
-        className="flex flex-col justify-start gap-[4vh] py-[4vh] px-[2vw]"
-      >
-        <h2 className="text-3xl font-medium">Search Engine Optimization</h2>
-        <p>At Bluefrogs, we believe in the power of Digital Marketing to transform your online presence.</p>
-        <motion.img 
-          src="sss.jpg" 
-          className="border-2 border-[#cac3c3]" 
-          whileHover={{ scale: 1.1, rotate: 2 }}
-        />
-      </motion.div>
-
-      <motion.div
-                   onClick={() => navigate("/websitedevelopmentmanagement")}
-
-        initial={{ opacity: 0, y: 50, scale: 0.9 }}
-        whileInView={{ opacity: 1, y: 0, scale: 1 }}
-        transition={{ duration: 0.5, ease: "easeOut" }}
-        whileHover={{ scale: 1.05, y: -10, boxShadow: "0px 10px 30px rgba(0,0,0,0.1)" }}
-        className="flex flex-col justify-start gap-[4vh] py-[4vh] px-[2vw]"
-      >
-        <h2 className="text-3xl font-medium">Website Development & Management</h2>
-        <p>Elevate your digital presence with BlueFrogs - where websites transform into experiences!</p>
-        <motion.img 
-          src={Brand} 
-          className="border-2 border-[#cac3c3]" 
-          whileHover={{ scale: 1.1, rotate: -2 }}
-        />
-      </motion.div>
-    </div>
-  </div>
-</div>
+ </div>
     </div>
   );
 };
