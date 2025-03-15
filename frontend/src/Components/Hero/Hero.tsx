@@ -142,7 +142,7 @@ const Hero = () => {
             </button> */}
             <div className="flex flex-col gap-[1vh] justify-center w-fit">
         
-              <button className="w-[16vw] h-[50px] text-white hover:text-black rounded-3xl px-[15%] bg-transparent hover:bg-gray-100 border-1 font-extralight border-gray-500 text-lg text-center shadow-md transition-all duration-300 ease-in-out transform hover:scale-105 hover:shadow-lg active:scale-95">
+              <button className="w-[16vw] h-[50px] text-black hover:text-black rounded-3xl px-[15%] bg-white hover:bg-gray-100 border-1 font-extralight border-gray-500 text-lg text-center shadow-md transition-all duration-300 ease-in-out transform hover:scale-105 hover:shadow-lg active:scale-95">
                 Book A Call With Us..!
               </button>
 

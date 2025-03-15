@@ -81,7 +81,7 @@ const projects = () => {
 
     {/* Subheading */}
     <motion.h1
-      className="md:text-3xl text-xl mt-[2vh] text-[#004aad] font-semibold w-[90%] leading-tight"
+      className="md:text-xl text-lg mt-[2vh] text-[#004aad] font-semibold w-[90%] leading-tight"
       initial={{ opacity: 0, x: -20 }}
       animate={{ opacity: 1, x: 0 }}
       transition={{ duration: 1.2 }}

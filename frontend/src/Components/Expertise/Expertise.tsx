@@ -41,38 +41,38 @@ const services = [
   {
     title: "Brand Building & Analysis",
     text: "Need a voice that speaks right to your audience's heart? That's where we come in!",
-    image: "analysis.jpg",
+    image: "https://i.pinimg.com/736x/70/6f/ea/706feaf29a1853424352fdc376291c59.jpg",
     link: "/brandanalysis",
   },
   {
     title: "Influencer & Performance Marketing",
     text: "We go beyond flashy campaigns to foster innovation and creativity.",
     image: "strategy.jpg",
-    link: "/brandstrategy",
+    link: "/influencer",
   },
   {
     title: "Website Development & Management",
     text: "Take your social media game to the next level with our expert management.",
-    image: "https://i.pinimg.com/736x/a1/cb/28/a1cb28275e9281a96b527266d5f62739.jpg",
-    link: "/socialmediamanagement",
+    image: "https://i.pinimg.com/736x/30/27/bd/3027bda94ae45c94964a187482e3c4ad.jpg",
+    link: "/Website",
   },
   {
     title: "Social Media & Design Solution ",
     text: "Maximize your ROI with data-driven marketing strategies.",
-    image: "social.jpg",
+    image: "https://i.pinimg.com/736x/df/81/ff/df81ff756d7b232bf5e54a82e9fb3243.jpg",
     link: "/performancemarketing",
   },
   {
     title: "Content Strategy & Content Creation",
     text: "Transform your online presence with our SEO expertise.",
-    image: "https://i.pinimg.com/736x/02/f9/b0/02f9b0e9977731b6f2ee027e22edb666.jpg",
-    link: "/searchengineoptimization",
+    image: "https://i.pinimg.com/736x/1f/dd/6d/1fdd6d4964ba15d4b986c7c3b895c010.jpg",
+    link: "/content",
   },
   {
     title: "Financial Management & Compliance",
     text: "We craft experiences, not just websites.",
     image: "performance.jpg ",
-    link: "/websitedevelopmentmanagement",
+    link: "/financial",
   },
 ];
 const Expertise = () => {
@@ -139,12 +139,14 @@ const Expertise = () => {
         whileHover={{ scale: 1.1 }}
         transition={{ duration: 0.3, ease: "easeOut" }}
       >
-        <FaCreditCard className="text-7xl text-black-500" />
+        <Compass size={100} className="text-black-500" />
       </motion.div>        
       <div className="flex flex-col">
-        <h2 className="md:text-2xl font-bold">Finance &<br/> Accounting Service</h2>
+        <h2 className="md:text-2xl font-bold">Market &<br/> Digital Presence</h2>
       </div>
     </div>
+
+    
   </div>
 
   <div className="flex flex-col md:flex-row justify-start gap-[2vw]">
@@ -167,10 +169,10 @@ const Expertise = () => {
         whileHover={{ scale: 1.1 }}
         transition={{ duration: 0.3, ease: "easeOut" }}
       >
-        <Compass size={100} className="text-black-500" />
+        <FaCreditCard className="text-7xl text-black-500" />
       </motion.div>        
       <div className="flex flex-col">
-        <h2 className="md:text-2xl font-bold">Market &<br/> Digital Presence</h2>
+        <h2 className="md:text-2xl font-bold">Finance &<br/> Accounting Service</h2>
       </div>
     </div>
   </div>
@@ -183,70 +185,10 @@ const Expertise = () => {
         transition={{ duration: 1.2, ease: "easeOut" }}
         className="text-sm text-[#333333] w-[100%] py-[vh] md:items-center items-start justify-center flex md:flex-row flex-col"
       >
-       
-    {/* <div className='text-sm  text-[#333333] w-[90%] px-[4%] py-[5vh] md:items-center items-start justify-center flex md:flex-row flex-col'>
-          
-          <div className='md:w-[30%] flex flex-col justify-center items-center'>
-            <p className='flex justify-center items-center align-middle font-bold '><span className='font-bold text-3xl mb-[2px] mr-[5px]'>+</span> Branding & Brand Strategy</p>
 
-          </div>
-          <div className='md:w-[30%] flex flex-col justify-center items-center'>
-          <p className='flex justify-center items-center align-middle font-bold'><span className='font-bold text-3xl mb-[2px]  mr-[5px]'>+</span>Market & Digital Presence</p>
-
-          </div>
-          <div className='md:w-[30%] flex flex-col justify-center items-center'>
-            <p className='flex justify-center items-center align-middle font-bold'><span className='font-bold text-3xl mb-[2px]  mr-[5px]'>+</span>Finance & Accounting Service</p>
-
-          </div>
-
-        
-
-          <div className='md:w-[30%] flex flex-col justify-center items-start'>
-          <p className='flex justify-center  items-center align-middle font-bold'><span className='font-bold text-3xl mb-[2px]  mr-[5px]'>+</span>Website & IT Solution</p>
-
-          </div>
-
-
-    </div> */}
       </motion.div>
 
-      {/* Statistics Section */}
-      {/* <motion.div 
-        initial={{ opacity: 0, y: 50 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 1.5, ease: "easeOut" }}
-        className="w-[100%] py-[5vh] gap-[5vh] md:gap-[2vw] md:items-center items-center justify-center flex md:flex-row flex-col"
-      >
-        <div className="flex flex-col md:w-[22%]">
-            <div className="flex">
-            <AnimatedNumber target={85} />  <span style={{ WebkitTextStroke: "2px black" }} className="border-b border-gray-500/30 font-bold text-8xl md:text-[6vw] text-transparent">
-    +
-    </span>
-
-            </div>
-          
-          <p className="text-xl mt-[2vh] text-[#333333]">Clients Around the World</p>
-        </div>
-        <div className="flex flex-col md:w-[22%]">
-        <div className="flex">
-            <AnimatedNumber target={100} />  <span style={{ WebkitTextStroke: "2px black" }} className="border-b border-gray-500/30 font-bold text-8xl md:text-[6vw] text-transparent">
-    +
-    </span>
-
-            </div>
-          <p className="text-xl mt-[2vh] text-[#333333]">Successful Projects</p>
-        </div>
-        <div className="flex flex-col md:w-[22%]">
-        <div className="flex">
-            <AnimatedNumber target={241} />  <span style={{ WebkitTextStroke: "2px black" }} className="border-b border-gray-500/30 font-bold text-8xl md:text-[6vw] text-transparent">
-    +
-    </span>
-
-            </div>
-          <p className="text-xl mt-[2vh] text-[#333333]">Satisfied Customers</p>
-        </div>
-      </motion.div> */}
-
+     
 <div id="our-services" >
   {/* Animated Heading */}
   <motion.div 
@@ -284,13 +226,9 @@ const Expertise = () => {
       </motion.div>
       <motion.div
         className="absolute inset-0 bg-[#0b0b0b1d] bg-opacity-50 transition-all duration-300 ease-in-out"
-        style={{
-          opacity: 0,
-          backdropFilter: 'blur(10px)',
-          
-        }}
+        
         // Apply opacity change on hover for the blur effect
-        whileHover={{ opacity: 1 }}
+     
       />
       {/* Arrow Icon with hover animation */}
       <motion.div className="bottom-4 right-4 duration-300 z-20">
