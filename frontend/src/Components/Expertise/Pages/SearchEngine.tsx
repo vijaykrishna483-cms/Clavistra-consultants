@@ -3,7 +3,7 @@
 import { motion } from 'framer-motion';
 import Navbar from '../../Navbar/Navbar';
 
-const BrandAnalysis = () => {
+const SearchEngine = () => {
 
   const cardData = [
     { title: 'Content Planning & Editorial Calendar', text: 'Craft a comprehensive strategy that aligns with your goals and resonates with your audience.', imgSrc: 'https://images.unsplash.com/vector-1741695667949-5b89ed5c65be?q=80&w=2360&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D' },
@@ -92,4 +92,4 @@ const BrandAnalysis = () => {
   );
 };
 
-export default BrandAnalysis;
+export default SearchEngine;

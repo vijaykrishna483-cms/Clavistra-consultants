@@ -3,7 +3,7 @@
 import { motion } from 'framer-motion';
 import Navbar from '../../Navbar/Navbar';
 
-const BrandAnalysis = () => {
+const Website = () => {
   const cardData = [
     { title: 'Financial Planning & Budgeting', text: 'Craft a comprehensive strategy that aligns with your goals and resonates with your audience.', imgSrc: '  https://images.unsplash.com/vector-1741097263399-022b8b0f776f?q=80&w=2360&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D' },
     { title: 'Tax & Regulatory Compliance', text: 'Understand market trends and competitor positioning to make informed decisions.', imgSrc: 'https://images.unsplash.com/vector-1738179384872-51a3d3435f64?q=80&w=2360&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D' },
@@ -91,4 +91,4 @@ const BrandAnalysis = () => {
   );
 };
 
-export default BrandAnalysis;
+export default Website;
