@@ -2,29 +2,29 @@ import { motion } from 'framer-motion'
 import { ArrowUpRight } from 'lucide-react'
 
 // import Bg1 from "../../assets/office.jpg";
-import Bg2 from "../../assets/bg2.jpg";
+// import Bg2 from "../../assets/bg2.jpg";
 // import Bg3 from "../../assets/bg3.jpg";
-import { useEffect, useState } from 'react';
+// import { useEffect, useState } from 'react';
 
-const slides = [
-    {
-      image: Bg2,
-      quote: "Coming Soon",
+// const slides = [
+//     {
+//       image: Bg2,
+//       quote: "Coming Soon",
      
-    },
-    {
-      image: Bg2,
-      quote: "Coming Soon",
+//     },
+//     {
+//       image: Bg2,
+//       quote: "Coming Soon",
     
   
-    },
-    {
-      image: Bg2,
-      quote: "Coming Soon",
+//     },
+//     {
+//       image: Bg2,
+//       quote: "Coming Soon",
     
   
-    }
-  ];
+//     }
+//   ];
 
 
 const projects = () => {
@@ -32,16 +32,16 @@ const projects = () => {
 
     // const [currentIndex, setCurrentIndex] = useState(0);
     
-      useEffect(() => {
-        const interval = setInterval(() => {
-          nextSlide();
-        }, 5000);
-        return () => clearInterval(interval);
-      }, []);
+      // useEffect(() => {
+      //   const interval = setInterval(() => {
+      //     nextSlide();
+      //   }, 5000);
+      //   return () => clearInterval(interval);
+      // }, []);
     
-      const nextSlide = () => {
-        setCurrentIndex((prevIndex: number) => (prevIndex + 1) % slides.length);
-      };
+      // const nextSlide = () => {
+      //   setCurrentIndex((prevIndex: number) => (prevIndex + 1) % slides.length);
+      // };
     
       // const prevSlide = () => {
       //   setCurrentIndex((prevIndex: number) =>
