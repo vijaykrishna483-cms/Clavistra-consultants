@@ -1,9 +1,10 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Home from "./Home";
-import Socialmedia from "./Components/Expertise/Pages/Socialmedia";
+import Socialmedia from "./Components/Expertise/Pages/WebDev";
 import BrandAnalysis from "./Components/Expertise/Pages/BrandAnalysis";
-import BrandStrategy from "./Components/Expertise/Pages/Influencer";
-import Website from "./Components/Expertise/Pages/Financial";
+
+import BrandStrategy from "./Components/Expertise/Pages/influencer";
+import Website from "./Components/Expertise/Pages/financial";
 import SocialMedia from "./Components/Expertise/Pages/WebDev";
 import SearchEngine from "./Components/Expertise/Pages/SearchEngine";
 
