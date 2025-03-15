@@ -31,9 +31,9 @@
     {
       title: "Mission",
       faqs: [
-        { question: "What is your core mission?", answer: "Our mission is to solve business problems with heart, mind, and method — combining strategic thinking, tech innovation, financial wisdom, and actionable marketing intelligence. We don't deliver decks; WE DELIVER OUTCOMES. Every project we take up is an opportunity to create tangible business value, uplift processes, and make our clients stronger than yesterday." },
-        { question: "How do you deliver outcomes?", answer: "We aim to simplify complexity. Whether it’s a tech roadmap, a go-to-market strategy, an operational bottleneck, or a finance-led growth challenge — we break it down, solve it from the inside, and build systems that scale. Our mission is to make our clients future-ready — with agility, resilience, and clear direction." },
-        { question: "What values do you uphold?", answer: "And most importantly, we are mission-driven to keep it ethical, personal, and purposeful. We want to be the kind of consultants who don’t just impress — but genuinely transform, inspire, and stand by our clients as partners who care." },
+        { question: "We deliver outcomes", answer: "Our mission is to solve business problems with heart, mind, and method — combining strategic thinking, tech innovation, financial wisdom, and actionable marketing intelligence. We don't deliver decks; WE DELIVER OUTCOMES. Every project we take up is an opportunity to create tangible business value, uplift processes, and make our clients stronger than yesterday." },
+        { question: "Make future ready", answer: "We aim to simplify complexity. Whether it’s a tech roadmap, a go-to-market strategy, an operational bottleneck, or a finance-led growth challenge — we break it down, solve it from the inside, and build systems that scale. Our mission is to make our clients future-ready — with agility, resilience, and clear direction." },
+        { question: "Always stand by clients", answer: "And most importantly, we are mission-driven to keep it ethical, personal, and purposeful. We want to be the kind of consultants who don’t just impress — but genuinely transform, inspire, and stand by our clients as partners who care." },
       ],
     },
   ];
