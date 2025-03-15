@@ -10,7 +10,7 @@ import { motion } from "framer-motion";
 
 const Team = () => {
   return (
-    <div className="w-full mt-[5vh] md:mt-[30vh] px-[6%] md:px-[10%]">
+    <div className="w-full mt-[vh] md:mt-[20vh] px-[6%] md:px-[10%]">
       {/* Animated Heading */}
       <motion.h1
         className="border-b border-gray-500/30 text-[#333333] text-4xl md:text-[7vw] font-bold w-[90%] pb-[4vh] md:leading-[100px]"

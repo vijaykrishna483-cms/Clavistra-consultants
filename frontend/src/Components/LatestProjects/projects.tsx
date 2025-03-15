@@ -30,7 +30,7 @@ const slides = [
 const projects = () => {
 
 
-    const [currentIndex, setCurrentIndex] = useState(0);
+    // const [currentIndex, setCurrentIndex] = useState(0);
     
       useEffect(() => {
         const interval = setInterval(() => {
@@ -50,7 +50,7 @@ const projects = () => {
       // };
       
   return (
-    <div id='our-work' className="w-[100vw] h-full  mt-[30vh]">
+    <div id='our-work' className="w-[100vw] h-full  mt-[10vh]">
     {/* About Us */}
     <div className=' px-[6%] md:px-[10%]'>
     <motion.div 
@@ -93,12 +93,12 @@ At Clavistra Consulting, we go beyond strategy—we deliver tailored solutions t
 
 
 
-<div className="relative w-[100vw] h-[60vh] mt-[10vh]  overflow-hidden">
+{/* <div className="relative w-[100vw] h-[60vh] mt-[10vh]  overflow-hidden"> */}
 
 
 
    {/* Background Images */}
-   {slides.map((slide, index) => (
+   {/* {slides.map((slide, index) => (
         <div
           key={index}
           className={`absolute inset-0 bg-cover bg-center transition-all duration-[2000ms] ease-in-out ${
@@ -106,23 +106,11 @@ At Clavistra Consulting, we go beyond strategy—we deliver tailored solutions t
           }`}
           style={{ backgroundImage: `url(${slide.image})` }}
         ></div>
-      ))}
+      ))} */}
 
-      {/* Overlay Shade
-      <div className="absolute inset-0 flex justify-center">
-        {slides.map((_slide, index) => (
-          <div
-            key={index}
-            style={{ backgroundColor: "rgba(0, 0, 0, 0.3)" }}
-            className={`absolute z-10 top-0 left-1/2 w-[30vw] h-[60vh] transition-transform duration-[1500ms] ${
-              index === currentIndex ? "translate-y-0" : "-translate-y-full"
-            }`}
-          ></div>
-        ))}
-      </div> */}
-
+  
       {/* Quote Text */}
-      <div className="absolute inset-0 flex items-center justify-center pr-16 text-white z-20">
+      {/* <div className="absolute inset-0 flex items-center justify-center pr-16 text-white z-20">
         {slides.map((slide, index) => (
           <div
             key={index}
@@ -133,39 +121,18 @@ At Clavistra Consulting, we go beyond strategy—we deliver tailored solutions t
             {slide.quote}
           </div>
         ))}
-      </div>
+      </div> */}
 
       {/* Navigation Arrows */}
     
 
-<div className='w-[60vw]  bg-[#000] h-[20vh]'>
+{/* <div className='w-[60vw]  bg-[#000] h-[20vh]'>
 
 
-      {/* <div className='md:flex hidden  absolute w-[20vw] rounded-2xl px-2 py-2 z-10 right-[6vw] bottom-0 h-[20vh] bg-[white]'>
-     <img src={Bg1} className='w-[10vw] rounded-2xl  h-[17vh]' />
-     <div className='p-2 flex flex-col justify-center items-center'>
-     <p className=''>All projects</p>
-     <p>View more</p>
-        </div>
-</div> */}
+   
 
-{/* <div className="absolute  right-[10vw] md:right-5 top-[55vh] md:top-[50vh] transform -translate-y-1/2 flex flex-row md:flex-col gap-4 z-100">
-        <button
-          onClick={prevSlide}
-          className="md:w-14 md:h-14 w-12 h-12 border border-white flex items-center justify-center text-white transition-all duration-300 hover:bg-white hover:text-black"
-        >
-          <ChevronLeft size={30} />
-        </button>
-        <button
-          onClick={nextSlide}
-          className="md:w-14 md:h-14 w-12 h-12  border border-white flex items-center justify-center text-white transition-all duration-300 hover:bg-white hover:text-black"
-        >
-          <ChevronRight size={30} />
-        </button>
       </div> */}
-
-      </div>
-</div>
+{/* </div> */}
     </div>
   )
 }

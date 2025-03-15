@@ -20,7 +20,7 @@ const News = () => {
   };
 
   return (
-    <div id="blog" className="w-[100vw] flex flex-col justify-center items-center h-full mt-[5vh] md:mt-[20vh] overflow-hidden relative">
+    <div id="blog" className="w-[100vw] flex flex-col justify-center items-center h-full mt-[5vh] md:mt-[15vh] overflow-hidden relative">
       <div className="px-[6%] md:px-[10%]">
         <motion.div
           className="flex w-full items-end justify-end text-lg"

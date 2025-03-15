@@ -9,7 +9,7 @@ const Navbar = () => {
   const [active, setActive] = useState<number | null>(null);
   const [isScrolled, setIsScrolled] = useState(false);
 
-  const navItems = ["HOME", "OUR SERVICES", "ABOUT US", "OUR WORK", "BLOG"];
+  const navItems = ["HOME", "OUR SERVICES", "ABOUT US", "BLOG","CONTACT US"];
 
   // Detect Scroll Position
   useEffect(() => {

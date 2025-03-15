@@ -78,7 +78,7 @@ const services = [
 const Expertise = () => {
   const navigate =useNavigate();
   return (
-    <div  className="relative w-[100vw] md:h-[]  mt-[2vh] md:mt-[10vh]">
+    <div  className="relative w-[100vw] md:h-[]  mt-[2vh] md:mt-[]">
       {/* Heading Section */}
       <motion.div 
         initial={{ opacity: 0, y: 50 }}
@@ -86,8 +86,13 @@ const Expertise = () => {
         transition={{ duration: 0.8, ease: "easeOut" }}
         className="w-[100vw] md:h-[40%] px-[5%] md:px-[10%] flex justify-start"
       >
-        <h1 className="border-b py-[2vh]  border-gray-500/30 text-[#333333] text-5xl md:text-[7vw] font-bold md:w-[60%] leading-tight">
-          Our Area of Expertise
+        <h1 className="border-b py-[2vh]  border-gray-500/30 text-[#333333]md:w-[60%] leading-tight">
+    
+
+          <span className="text-5xl md:text-[5vw] font-extralight"> Our Area  of </span><br/> <span className=" font-bold text-5xl md:text-[7vw]">      Expertise</span> 
+
+
+
         </h1>
       </motion.div>
 
@@ -117,31 +122,31 @@ const Expertise = () => {
   initial={{ opacity: 0, y: 50 }}
   whileInView={{ opacity: 1, y: 0 }}
   transition={{ duration: 1.5, ease: "easeOut" }}
-  className="md:w-[100vw] py-[5vh] gap-[5vw] px-[10%] md:gap-[10vw] mt-[7vh] flex flex-col md:flex-col items-start md:items-center justify-center"
+  className="md:w-[100vw] py-[5vh] gap-[1vw] px-[10%] md:gap-[] mt-[2vh] flex items-start md:items-center justify-center"
 >
-  <div className="flex flex-col md:flex-row justify-start gap-[2vw]">
+  <div className="flex flex-col md:flex-row justify-start gap-[vw]">
 
-    <div className="flex flex-row  rounded-2xl w-[90vw] md:w-[30vw] gap-[6vw] md:gap-[1vw] align-middle justify-start items-start text-left space-y-4">
+    <div className="flex flex-col  rounded-2xl w-[90vw] md:w-[20vw] gap-[6vw] md:gap-[1vw] align-middle justify-center items-center text-left space-y-4">
       <motion.div
         whileHover={{ scale: 1.1 }}
         transition={{ duration: 0.3, ease: "easeOut" }}
       >
         <Brain size={100} className="text-black-500" />
       </motion.div>        
-      <div className="flex flex-col">
+      <div className="flex flex-col text-center">
         <h2 className="md:text-2xl font-bold">Branding & <br/> Brand Strategy</h2>
       </div>
     </div>
 
     {/* Finance Section */}
-    <div className="flex flex-row  rounded-2xl w-[90vw] md:w-[30vw] gap-[6vw] md:gap-[1vw] align-middle justify-start items-start text-left space-y-4">
+    <div className="flex flex-col  rounded-2xl w-[90vw] md:w-[20vw] gap-[6vw] md:gap-[1vw] align-middle justify-center items-center text-left space-y-4">
       <motion.div
         whileHover={{ scale: 1.1 }}
         transition={{ duration: 0.3, ease: "easeOut" }}
       >
         <Compass size={100} className="text-black-500" />
       </motion.div>        
-      <div className="flex flex-col">
+      <div className="flex flex-col text-center">
         <h2 className="md:text-2xl font-bold">Market &<br/> Digital Presence</h2>
       </div>
     </div>
@@ -149,29 +154,29 @@ const Expertise = () => {
     
   </div>
 
-  <div className="flex flex-col md:flex-row justify-start gap-[2vw]">
+  <div className="flex flex-col md:flex-row justify-start gap-[]">
     {/* Website Section */}
-    <div className="flex flex-row  rounded-2xl w-[90vw] md:w-[30vw] gap-[6vw] md:gap-[1vw] align-middle justify-start items-start text-left space-y-4">
+    <div className="flex flex-col  rounded-2xl w-[90vw] md:w-[20vw] gap-[6vw] md:gap-[1vw] align-middle justify-center items-center text-left space-y-4">
       <motion.div
         whileHover={{ scale: 1.1 }}
         transition={{ duration: 0.3, ease: "easeOut" }}
       >
         <Brain size={100} className="text-black-500" />
       </motion.div>        
-      <div className="flex flex-col">
+      <div className="flex flex-col  text-center">
         <h2 className="md:text-2xl font-bold">Website &<br/> IT Solution</h2>
       </div>
     </div>
 
     {/* Market Section */}
-    <div className="flex flex-row  rounded-2xl w-[90vw] md:w-[30vw] gap-[6vw] md:gap-[1vw] align-middle justify-start items-start text-left space-y-4">
+    <div className="flex flex-col mt-[2vh] rounded-2xl w-[90vw] md:w-[20vw] gap-[6vw] md:gap-[1vw] align-middle justify-center items-center text-left space-y-4">
       <motion.div
         whileHover={{ scale: 1.1 }}
         transition={{ duration: 0.3, ease: "easeOut" }}
       >
         <FaCreditCard className="text-7xl text-black-500" />
       </motion.div>        
-      <div className="flex flex-col">
+      <div className="flex flex-col  text-center">
         <h2 className="md:text-2xl font-bold">Finance &<br/> Accounting Service</h2>
       </div>
     </div>
@@ -195,10 +200,10 @@ const Expertise = () => {
     initial={{ opacity: 0, y: 50 }}
     whileInView={{ opacity: 1, y: 0 }}
     transition={{ duration: 0.8, ease: "easeOut" }}
-    className="w-[100vw] md:h-[40%] px-[5%] md:px-[10%] flex justify-start"
+    className="w-[100vw] md:h-[40%] px-[5%] mt-[10vh] md:px-[10%] flex justify-start"
   >
-    <h1 className="border-b py-[2vh] border-gray-500/30 text-[#333333] text-5xl md:text-[7vw] font-bold md:w-[60%] leading-tight">
-      What We Have to Offer
+    <h1 className="border-b py-[2vh] border-gray-500/30 text-[#333333]  md:w-[60%] leading-tight">
+     <span className="text-5xl md:text-[5vw] font-extralight">What We  </span><br/> <span className=" font-bold text-5xl md:text-[7vw]">Have to Offer </span> 
     </h1>
   </motion.div>
   <div className="w-full px-[10%] py-[9vh] grid grid-cols-1 md:grid-cols-3 gap-8">

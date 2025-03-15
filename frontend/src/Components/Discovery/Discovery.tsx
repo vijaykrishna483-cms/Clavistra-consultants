@@ -141,7 +141,7 @@
                   <Plus size={20} className={`transition-transform ${expandedIndex === index ? 'rotate-45' : ''}`} />
                 </div>
                 {expandedIndex === index && (
-                  <p className="mt-2 text-gray-700">{faq.answer}</p>
+                  <p className="mt-2 answer text-gray-700">{faq.answer}</p>
                 )}
               </div>
             ))}

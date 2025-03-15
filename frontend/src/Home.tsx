@@ -5,7 +5,7 @@ import CustomParallax from './Components/Parallax/Parallax'
 import Discovery from './Components/Discovery/Discovery'
 // import Features from './Components/Features/Features'
 // import Companies from './Components/Companies/Companies'
-import Projects from './Components/LatestProjects/projects'
+// import Projects from './Components/LatestProjects/projects'
 import News from './Components/News/News'
 import Team from './Components/Team/Team'
 import Contact from './Components/Contactus/Contact'
@@ -24,9 +24,10 @@ const Home = () => {
      } } />
     {/* <Features/> */}
     {/* <Companies/> */}
-    <Projects/>
-    <News/>
+    {/* <Projects/> */}
     <Team/>
+    <News/>
+    
     <Contact/>
     <Footer/>
    </div>
