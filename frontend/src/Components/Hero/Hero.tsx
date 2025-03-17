@@ -142,11 +142,11 @@ const Hero = () => {
             </button> */}
             <div className="flex flex-col gap-[1vh] justify-center items-center w-fit">
         
-              <button className="w-[18vw] h-[55px]  flex justify-center items-center gap-[2vw] text-white hover:text-black rounded-3xl px-[5%] bg-[#4556c6e6] hover:bg-gray-100 border-0 font-extralight border-gray-500 text-lg text-center shadow-md transition-all duration-300 ease-in-out transform hover:scale-105 hover:shadow-lg active:scale-95">
-                Book A Call With Us..!
+              <button className="w-[21vw] px-[5%] h-[55px] text-xl font-bold  flex justify-between items-center gap-[vw] text-white hover:text-black rounded-3xl mr-[2vw] bg-[#4556c6e6] hover:bg-gray-100 border-0  border-gray-500 text-center shadow-md transition-all duration-300 ease-in-out transform hover:scale-105 hover:shadow-lg active:scale-95">
+                Book A Call With Us!
 
                 <div
-          className="bg--500 rounded-full  border- p-2 border-grey-500  shadow-lg transition-all duration-300 ease-in-out transform hover:scale-110 hover:shadow-xl hover:bg-green-600 active:scale-90 animate-pulse cursor-pointer"
+          className=" rounded-full  border- p-2 border-grey-500  shadow-lg transition-all duration-300 ease-in-out transform hover:scale-110 hover:shadow-xl hover:bg-green-600 active:scale-90 animate-pulse cursor-pointer"
           onClick={() => setIsVisible(true)}
         >
           <PhoneCall size={28} className="text-white hover:text-black" />
@@ -187,17 +187,7 @@ const Hero = () => {
       </div>
       {showPopup && (
         <div className=" fixed  w-[100vw] h-[100vh] inset-0 flex items-center justify-center bg-[#1b1616c1] bg-opacity-50 z-50">
-          {/* <div className="box bg-white w-[40vw] h-[60vh] p-6 rounded-lg flex flex-col gap-[4vh] items-center justify-center shadow-lg text-center relative ">
-            <button className="absolute top-2 right-2 text-gray-500 hover:text-gray-800" onClick={() => setShowPopup(false)}>
-              <X size={20} />
-            </button>
-            <p className="text-xl">Lets Get started.!</p>
-            <h2 className="text-4xl font-bold mb-2">Sign Up Now!</h2>
-            <p className="text-lg">For exclusive marketing news and trends</p>
-            <input type="email" placeholder="Enter your email" className="w-[70%] p-2 border-b-2 bg-[#ffffff13] border-gray-700 rounded-2xl mb-4" />
-            <button className="bg-black text-white px-4 py-2 rounded-2xl hover:bg-gray-800">Subscribe</button>
-          </div> */}
-
+        
           <article className="cards py-[6vh]  bg-[#c9c7c7f7]">
             <div className="flex flex-col justify-center items-center gap-[2vh]">
               <button
@@ -219,7 +209,7 @@ const Hero = () => {
                 placeholder="Enter your email"
                 className="w-[83%] text-[#000] pl-[15px] p-2 border-b-2 bg-[#ffffff13] border-blue-700 rounded-2xl mb-2"
               />
-              <button className="bg-[rgb(46,49,146)] text-2xl font-light shadow-2xl text-white px-[3vw] py-[2vh] rounded-4xl hover:bg-[#2e3192]">
+              <button className="bg-[rgb(46,49,146)] text-3xl font-light shadow-2xl text-white px-[3vw] py-[2vh] rounded-4xl hover:bg-[#2e3192]">
                 Subscribe
               </button>
               <div className="w-[100%] ml-[9vh] flex flex-row align-middle justify-center items-center gap-[10px]">

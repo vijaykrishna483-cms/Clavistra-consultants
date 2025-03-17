@@ -2,7 +2,7 @@
 
 :root {
   /* Colors */
-  --brand-color: hsl(242, 100%, 50%);
+  --brand-color: #4556c6e6;
   --black: hsl(0, 0%, 0%);
   --white: hsl(0, 0%, 100%);
   /* Fonts */
@@ -84,12 +84,12 @@
   flex-direction: column;
   justify-content: space-between;
   align-self: flex-end;
-  height: 100%;
-  padding: 12% 1.25rem 1.875rem;
+  height: 70%;
+  padding: 0% 1.25rem 1.875rem;
   background: linear-gradient(
     180deg,
     hsla(0, 0%, 0%, 0) 0%,
-    hsla(0, 0%, 0%, 0.3) 10%,
+    hsla(0, 0%, 0%, 0.633) 10%,
     hsl(0, 0%, 0%) 100%
   );
 }
@@ -123,14 +123,15 @@
   font-weight: bold;
   border-radius: 0.45em;
   border: none;
+  margin-left: 51%;
   background-color: var(--brand-color);
   font-family: var(--font-title);
   font-size: 1.125rem;
-  color: var(--black);
+  color: white;
 }
 
 .card__button:focus {
-  outline: 2px solid black;
+  outline: 2px solid white;
   outline-offset: -5px;
 }
 
@@ -199,3 +200,20 @@
   }
 }
 
+
+
+.backdrop-shadow {
+  /* width: 300px;
+  height: 200px; */
+  background-color: white;
+  box-shadow: 0 4px 16px rgb(0, 0, 0);
+  border-radius: 10px;
+
+}
+
+
+.hovercard:hover{
+  /* background-color: rgb(255, 255, 255); */
+  box-shadow: 0 4px 16px rgb(2, 5, 68);
+  border-radius: 10px;
+}

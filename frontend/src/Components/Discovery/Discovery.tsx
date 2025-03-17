@@ -78,7 +78,7 @@
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 1.2 }}
         >
-          Designing the future, today - welcome to our architecture.
+          {/* Designing the future, today - welcome to our architecture. */}
         </motion.h1>
   
         <div className="flex md:flex-row flex-col w-full items-center justify-center">
@@ -141,7 +141,7 @@
                   <Plus size={20} className={`transition-transform border-2 rounded ${expandedIndex === index ? 'rotate-45' : ''}`} />
                 </div>
                 {expandedIndex === index && (
-                  <p className="mt-2 answer text-xl font-bold text-gray-700">{faq.answer}</p>
+                  <p className="mt-2  text-lg font-light text-gray-700">{faq.answer}</p>
                 )}
               </div>
             ))}
