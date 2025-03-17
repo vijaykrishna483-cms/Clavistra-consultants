@@ -1,22 +1,46 @@
 
-  import { ArrowUpRight, ChevronLeft, ChevronRight, Plus } from "lucide-react";
+  import {  ChevronLeft, ChevronRight, Plus } from "lucide-react";
   import "./Discovery.css";
-  import { useState} from "react";
+  import { JSX, useState} from "react";
   import { motion } from "framer-motion";
   interface DiscoveryProps {
     onPrev: () => void;
     onNext: () => void;
   }
+
+
+
+  interface ItalicizeCapsProps {
+    text: string;
+  }
+  
+  const ItalicizeCaps: React.FC<ItalicizeCapsProps> = ({ text }) => {
+    const processText = (text: string): (string | JSX.Element)[] => {
+      const regex = /\b([A-Z]+)\b/g;
+      return text.split(/(\b[A-Z]+\b)/g).map((word, index) =>
+        regex.test(word) ? <em key={index}>{word}</em> : word
+      );
+    };
+  
+    return <p>{processText(text)}</p>;
+  };
+  
+
+
+
   const Discovery: React.FC<DiscoveryProps> = ({ onPrev, onNext }) => {
     const [activeIndex, setActiveIndex] = useState<number>(0);
     const [expandedIndex, setExpandedIndex] = useState<number | null>(0); 
+
+
+
 
   const sections = [
     {
       title: "History",
       faqs: [
         { question: "From Friendship to Foundership", answer: "It all started four years ago over a cup of chai and a late-night brainstorming session. We were five friends from completely different professional walks of life — a sharp industrialist & lawyer with an eye for scalable systems, a chartered accountant who could see numbers in motion, a hands-on engineer turned consultant with a knack for solving business puzzles, a marketing expert who lived and breathed brand psychology, and a tech hacker who could build anything from scratch with sheer logic and code. Our paths crossed over collaborative work and casual debates — but soon we realized we had something powerful in common: a shared hunger to create, solve, and elevate businesses from the inside out." },
-        { question: "Where Minds Align, Ideas Thrive", answer: "Our diverse backgrounds became our greatest strength. We were never just talking in silos — finance met design, operations spoke to growth, and technology enabled it all. What started as informal collaboration turned into a deep synergy. We weren’t just solving business problems; we were challenging paradigms, questioning the ‘why,’ and building better answers. Our value systems naturally aligned — INTEGRITY, IMPACT & INNOVATION became our pillars. We never believed in surface-level fixes; we believed in solving from the core, building from the roots." },
+        { question: "Where Minds Align, Ideas Thrive", answer: "Our diverse backgrounds became our greatest strength. We were never just talking in silos — finance met design, operations spoke to growth, and technology enabled it all. What started as informal collaboration turned into a deep synergy. We weren’t just solving business problems; we were challenging paradigms, questioning the ‘why,’ and building better answers. Our value systems naturally aligned — integrity,impact & innovation became our pillars. We never believed in surface-level fixes; we believed in solving from the core, building from the roots." },
         { question: "From Projects to Purpose", answer: "What began with helping a few startups scale, optimize, and grow soon turned into a full-fledged mission. We saw how most businesses were struggling not because of lack of intent — but lack of integrated thinking. So, we formed this consulting firm — not to be just another advisor, but a TRUE PARTNER IN TRANSFORMATION. We bring not just expertise, but ownership. And our goal remains simple: to make businesses not only succeed — but SUSTAIN, SCALE, and LEAD." },
       ],
     },
@@ -45,7 +69,7 @@
     return (
       <div id="about-us" className="w-[100vw] h-full px-[10%] md:px-[10%]">
         {/* About Us */}
-        <motion.div 
+        {/* <motion.div 
           className="flex w-full items-end justify-end text-lg"
           initial={{ opacity: 0, x: 20 }}
           animate={{ opacity: 1, x: 0 }}
@@ -53,7 +77,7 @@
         >
           <p> About Us</p>
           <ArrowUpRight size={24} strokeWidth={2} />
-        </motion.div>
+        </motion.div> */}
   
         {/* Animated Headline */}
         <motion.h1
@@ -141,7 +165,8 @@
                   <Plus size={20} className={`transition-transform border-2 rounded ${expandedIndex === index ? 'rotate-45' : ''}`} />
                 </div>
                 {expandedIndex === index && (
-                  <p className="mt-2  text-lg font-light text-gray-700">{faq.answer}</p>
+                  // <p className="mt-2  text-lg font-light text-gray-700">{faq.answer}</p>
+                  <ItalicizeCaps key={index} text={faq.answer} />
                 )}
               </div>
             ))}

@@ -1,4 +1,3 @@
-import {  ArrowUpRight } from "lucide-react";
 import { motion } from "framer-motion";
 // import { useEffect, useState, useRef } from "react";
 import { Brain, Compass } from "lucide-react";
@@ -110,10 +109,10 @@ const Expertise = () => {
         <div className="flex md:flex-row flex-col align-baseline justify-between">
           <p className="font-light md:w-[70%]">
           We partner with businesses to craft data-driven strategies, define powerful brand architectures, and execute innovative digital solutions. With deep expertise across industries, we help you navigate complexity, unlock growth opportunities, and build sustainable competitive advantages—turning challenges into outcomes and ideas into lasting impact.          </p>
-          <div className="flex mt-[3vh] md:w-[20%] items-center text-lg">
+          {/* <div className="flex mt-[3vh] md:w-[20%] items-center text-lg">
             <p>All Services</p>
             <ArrowUpRight size={24} strokeWidth={2} />
-          </div>
+          </div> */}
         </div>
       </motion.div>
 
@@ -127,7 +126,7 @@ const Expertise = () => {
 >
   <div className="flex flex-col md:flex-row justify-start gap-[vw]">
 
-    <div className="flex flex-col  rounded-2xl w-[90vw] md:w-[20vw] gap-[6vw] md:gap-[1vw] align-middle justify-center items-center text-left space-y-4">
+    <div className="flex flex-col  rounded-2xl w-[50vw] md:w-[20vw] gap-[6vw] md:gap-[1vw] align-middle justify-center items-center text-left space-y-4">
       <motion.div
         whileHover={{ scale: 1.1 }}
         transition={{ duration: 0.3, ease: "easeOut" }}
@@ -140,7 +139,7 @@ const Expertise = () => {
     </div>
 
     {/* Finance Section */}
-    <div className="flex flex-col  rounded-2xl w-[90vw] md:w-[20vw] gap-[6vw] md:gap-[1vw] align-middle justify-center items-center text-left space-y-4">
+    <div className="flex flex-col  rounded-2xl w-[50vw] md:w-[20vw] gap-[6vw] md:gap-[1vw] align-middle justify-center items-center text-left space-y-4">
       <motion.div
         whileHover={{ scale: 1.1 }}
         transition={{ duration: 0.3, ease: "easeOut" }}
@@ -157,7 +156,7 @@ const Expertise = () => {
 
   <div className="flex flex-col md:flex-row justify-start gap-[]">
     {/* Website Section */}
-    <div className="flex flex-col  rounded-2xl w-[90vw] md:w-[20vw] gap-[6vw] md:gap-[1vw] align-middle justify-center items-center text-left space-y-4">
+    <div className="flex flex-col  rounded-2xl w-[50vw] md:w-[20vw] gap-[6vw] md:gap-[1vw] align-middle justify-center items-center text-left space-y-4">
       <motion.div
         whileHover={{ scale: 1.1 }}
         transition={{ duration: 0.3, ease: "easeOut" }}
@@ -170,7 +169,7 @@ const Expertise = () => {
     </div>
 
     {/* Market Section */}
-    <div className="flex flex-col mt-[2vh] rounded-2xl w-[90vw] md:w-[20vw] gap-[6vw] md:gap-[1vw] align-middle justify-center items-center text-left space-y-4">
+    <div className="flex flex-col mt-[2vh] rounded-2xl w-[50vw] md:w-[20vw] gap-[6vw] md:gap-[1vw] align-middle justify-center items-center text-left space-y-4">
       <motion.div
         whileHover={{ scale: 1.1 }}
         transition={{ duration: 0.3, ease: "easeOut" }}
@@ -242,7 +241,9 @@ const Expertise = () => {
 
 
 
-<article className="card"   key={index}  style={{ backgroundImage: `url(${service.image})` }}
+<article className="card"   
+onClick={() => navigate(service.link)}
+key={index}  style={{ backgroundImage: `url(${service.image})` }}
     
       >
   {/* <img
@@ -254,7 +255,9 @@ const Expertise = () => {
   /> */}
 
   
-  <div className="card__content | flow">
+  <div 
+  
+  className="card__content | flow">
     <div className="card__content--container | flow ">
       <h2 className="card__title ">{service.title}</h2>
       <p className="card__description">

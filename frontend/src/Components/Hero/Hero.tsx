@@ -2,10 +2,21 @@ import { useState, useEffect } from "react";
 import { ChevronRight, ChevronLeft } from "lucide-react";
 
 import Navbar from "../Navbar/Navbar";
-// import { PhoneCall } from "lucide-react";
-// import { Facebook, Twitter, Instagram } from "lucide-react";
+
 import {  PhoneCall, X } from "lucide-react";
 import "./Hero.css";
+
+
+const openWhatsApp = () => {
+  const phoneNumber = "+916238196861"; 
+  const message = "Hello! I'm interested in your services."; 
+  const url = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+
+  window.open(url, "_blank");
+};
+
+
+
 const slides = [
   {
     image: "https://images.unsplash.com/photo-1553877522-43269d4ea984?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
@@ -15,7 +26,7 @@ const slides = [
     number: "01",
   },
   {
-    image: "https://images.unsplash.com/photo-1423784346385-c1d4dac9893a?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    image: "https://images.unsplash.com/photo-1508780709619-79562169bc64?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     quote: "Refining and Redefining Brands",
     // functn: "You have a vision? | We have a solution",
     link: "https://www.youtube.com/",
@@ -23,7 +34,7 @@ const slides = [
   },
  
   {
-    image: "https://images.unsplash.com/photo-1514108225820-2b602873ac36?q=80&w=1931&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    image: "asasas.jpg",
     quote: "We Implement & Deliver Results",
     // functn: "You have a vision? | We have a solution",
     link: "https://www.youtube.com/",
@@ -133,21 +144,24 @@ const Hero = () => {
       <div className="fixed justify-center align-middle z-100 md:w-fit rounded-2xl top-[94vh] w flex flex-row items-center shadow-3xl h-[20vh] left-[44vw] md:left-[75vw] md:top-[80vh]">
       <div className="flex  place-items-center  gap-[1vw]">
         {isVisible && (
-          <div className="w-[] flex flex-row rounded-2xl  shadow-2xl bg-transparent h-[] items-center justify-center gap-4 relative">
+          <div className="w-[] hidden md:flex flex-row rounded-2xl  shadow-2xl bg-transparent h-[] items-center justify-center gap-4 relative">
             {/* <button
               className="absolute top-2 right-2 p-2 bg-gray-200 rounded-full hover:bg-gray-300 transition-all"
               onClick={() => setIsVisible(false)}
             >
               <X size={20} />
             </button> */}
-            <div className="flex flex-col gap-[1vh] justify-center items-center w-fit">
+            <div
+            onClick={openWhatsApp}
+            className="flex flex-col gap-[1vh] justify-center items-center w-fit">
         
-              <button className="w-[21vw] px-[5%] h-[55px] text-xl font-bold  flex justify-between items-center gap-[vw] text-white hover:text-black rounded-3xl mr-[2vw] bg-[#4556c6e6] hover:bg-gray-100 border-0  border-gray-500 text-center shadow-md transition-all duration-300 ease-in-out transform hover:scale-105 hover:shadow-lg active:scale-95">
+              <button
+               className="w-[21vw] px-[5%] h-[55px] text-xl font-bold  flex justify-between items-center gap-[vw] text-white hover:text-black rounded-3xl mr-[2vw] bg-[#4556c6e6] hover:bg-gray-100 border-0  border-gray-500 text-center shadow-md transition-all duration-300 ease-in-out transform hover:scale-105 hover:shadow-lg active:scale-95">
                 Book A Call With Us!
 
                 <div
           className=" rounded-full  border- p-2 border-grey-500  shadow-lg transition-all duration-300 ease-in-out transform hover:scale-110 hover:shadow-xl hover:bg-green-600 active:scale-90 animate-pulse cursor-pointer"
-          onClick={() => setIsVisible(true)}
+          
         >
           <PhoneCall size={28} className="text-white hover:text-black" />
         </div>
@@ -188,7 +202,7 @@ const Hero = () => {
       {showPopup && (
         <div className=" fixed  w-[100vw] h-[100vh] inset-0 flex items-center justify-center bg-[#1b1616c1] bg-opacity-50 z-50">
         
-          <article className="cards py-[6vh]  bg-[#c9c7c7f7]">
+          <article className="md:w-[40vw] w-[90vw] cards py-[6vh]  bg-[#c9c7c7f7]">
             <div className="flex flex-col justify-center items-center gap-[2vh]">
               <button
                 className="absolute top-2 right-2 text-gray-500 hover:text-gray-800"
@@ -198,22 +212,22 @@ const Hero = () => {
               </button>
 
               <img src="thefinal.png" className="w-[18vw]" />
-              <h2 className="text-6xl font-bold mb-1 text-[#000]">
+              <h2 className="text-3xl md:text-6xl font-bold mb-1 text-[#000]">
                 Sign Up Now!
               </h2>
-              <p className="text-2xl text-[#3a3838] font-lighter">
-                For exclusive marketing news and trends
+              <p className="text-md text-center md:text-2xl text-[#3a3838] font-lighter">
+                For exclusive marketing news 
               </p>
               <input
                 type="email"
                 placeholder="Enter your email"
                 className="w-[83%] text-[#000] pl-[15px] p-2 border-b-2 bg-[#ffffff13] border-blue-700 rounded-2xl mb-2"
               />
-              <button className="bg-[rgb(46,49,146)] text-3xl font-light shadow-2xl text-white px-[3vw] py-[2vh] rounded-4xl hover:bg-[#2e3192]">
+              <button className="bg-[rgb(46,49,146)] text-xl md:text-3xl font-light shadow-2xl text-white px-[3vw] py-[2vh] rounded-4xl hover:bg-[#2e3192]">
                 Subscribe
               </button>
-              <div className="w-[100%] ml-[9vh] flex flex-row align-middle justify-center items-center gap-[10px]">
-                <button className="w-[90%] h-[50px] text-black rounded-3xl bg-transparent border-2 border-[#6c6969] text-center font-extralight align-middle ">
+              <div className="w-[100%] md:ml-[9vh] flex flex-row align-middle justify-center items-center gap-[10px]">
+                <button className="md:w-[90%] md:h-[50px] w-[80%] px-[2%] text-black rounded-3xl bg-transparent border-2 border-[#6c6969] text-center font-extralight align-middle ">
                   Book A call With Us..!
                 </button>
                 <div className="bg-[#179e17] rounded-full p-[15px]">

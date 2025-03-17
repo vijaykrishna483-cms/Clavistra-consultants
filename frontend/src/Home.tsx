@@ -6,7 +6,7 @@ import Discovery from './Components/Discovery/Discovery'
 // import Features from './Components/Features/Features'
 // import Companies from './Components/Companies/Companies'
 // import Projects from './Components/LatestProjects/projects'
-import News from './Components/News/News'
+// import News from './Components/News/News'
 import Team from './Components/Team/Team'
 import Contact from './Components/Contactus/Contact'
 import Footer from './Components/Footer/Footer'
@@ -26,7 +26,7 @@ const Home = () => {
     {/* <Companies/> */}
     {/* <Projects/> */}
     <Team/>
-    <News/>
+    {/* <News/> */}
     
     <Contact/>
     <Footer/>
