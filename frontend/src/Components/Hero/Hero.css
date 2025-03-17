@@ -1,15 +1,15 @@
 
-.card {
+.cards {
   position: relative;
   width: 40vw;
   height: full;
   /* color: #fff; */
   /* background: [#191351]; */
   overflow-x: hidden;
-  border-top: 1px solid rgba(255, 49, 49, 0.5);
-  border-right: 1px solid rgba(0, 255, 255, 0.5);
-  border-bottom: 1px solid rgba(57, 255, 20, 0.5);
-  border-left: 1px solid rgba(255, 255, 113, 0.5);
+  border-top: 1px solid rgba(70, 49, 255, 0.5);
+  border-right: 1px solid rgba(0, 8, 255, 0.995);
+  border-bottom: 1px solid rgba(4, 10, 77, 0.5);
+  border-left: 1px solid rgba(113, 115, 255, 0.992);
   font-family: sans-serif;
   display: flex;
   flex-direction: column;

@@ -6,19 +6,19 @@ import Navbar from '../../Navbar/Navbar';
 const BrandAnalysis = () => {
 
   const cardData = [
-    { title: 'Brand Strategy Development', text: 'Craft a comprehensive strategy that aligns with your goals and resonates with your audience.', imgSrc: 'https://images.unsplash.com/vector-1741695667949-5b89ed5c65be?q=80&w=2360&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D' },
-    { title: 'Competitor & Market Analysis', text: 'Understand market trends and competitor positioning to make informed decisions.', imgSrc: 'https://images.unsplash.com/vector-1741240041535-9a1d6d945c93?q=80&w=2148&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D' },
-    { title: 'Brand Identity & Positioning', text: 'Establish a unique and memorable brand identity that stands out.', imgSrc: 'https://images.unsplash.com/vector-1741097263427-f83d88ebfb0a?q=80&w=2360&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D' },
-    { title: 'Customer Personal Development', text: 'Identify and understand your target audience to better meet their needs.', imgSrc: 'https://images.unsplash.com/vector-1739803880192-a247d1337285?q=80&w=2360&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D' },
-    { title: 'Rebranding & Brand Refresh', text: 'Revitalize your brand’s image to stay relevant and appealing.', imgSrc: 'https://images.unsplash.com/vector-1739128047872-a82f4cced174?q=80&w=2360&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D' },
-    { title: 'Brand Messaging & Storytelling', text: 'Craft compelling stories that resonate with your audience.', imgSrc: 'https://images.unsplash.com/vector-1739647326715-454fb6be54be?q=80&w=2360&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D' },
-    { title: 'Brand Audit & Performance Review', text: 'Evaluate your brand’s performance to optimize strategies.', imgSrc: 'https://images.unsplash.com/vector-1740057539117-42cb2c6da083?q=80&w=2360&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D' },
+    { title: 'Brand Strategy Development', text: 'Craft a strategic roadmap to define your brand’s vision, mission, and long-term goals.', imgSrc: 'https://images.unsplash.com/vector-1741695667949-5b89ed5c65be?q=80&w=2360&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D' },
+    { title: 'Competitor & Market Analysis', text: ' Gain insights into your market landscape and competition to position your brand effectively.', imgSrc: 'https://images.unsplash.com/vector-1741240041535-9a1d6d945c93?q=80&w=2148&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D' },
+    { title: 'Brand Identity & Positioning', text: 'Establish a distinct identity and market positioning that aligns with your target audience.', imgSrc: 'https://images.unsplash.com/vector-1741097263427-f83d88ebfb0a?q=80&w=2360&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D' },
+    { title: 'Customer Personal Development', text: 'Build detailed audience personas to enhance brand communication and engagement.', imgSrc: 'https://images.unsplash.com/vector-1739803880192-a247d1337285?q=80&w=2360&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D' },
+    { title: 'Rebranding & Brand Refresh', text: ' Revitalize your brand’s look, feel, and messaging to stay relevant and impactful.', imgSrc: 'https://images.unsplash.com/vector-1739128047872-a82f4cced174?q=80&w=2360&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D' },
+    { title: 'Brand Messaging & Storytelling', text: 'Develop compelling narratives that authentically connect with your audience.', imgSrc: 'https://images.unsplash.com/vector-1739647326715-454fb6be54be?q=80&w=2360&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D' },
+    { title: 'Brand Audit & Performance Review', text: 'Assess your brand’s strengths, weaknesses, and opportunities for growth.', imgSrc: 'https://images.unsplash.com/vector-1740057539117-42cb2c6da083?q=80&w=2360&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D' },
   ];
 
 
 
   return (
-    <div className='w-[100vw] pt-[10vh] min-h-screen'>
+    <div className='w-[100vw] pt-[10vh] min-h-screen b'>
       {/* Heading Section */}
       <Navbar/>
       <motion.div 
@@ -49,9 +49,9 @@ const BrandAnalysis = () => {
           initial={{ opacity: 0, x: 50 }}
           whileInView={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8, ease: "easeOut" }}
-          src='https://i.pinimg.com/736x/70/6f/ea/706feaf29a1853424352fdc376291c59.jpg' 
+          src='https://wallpaperbat.com/img/418492-six-industries-that-have-benefited-by-big-data-analytics.jpg' 
           alt='Performance Marketing' 
-          className='md:w-1/2  w-[90vw] rounded-lg h-[50vh] shadow-lg'
+          className=' md:w-[40vw] mb-[10vh] rounded-lg h-[55vh] shadow-lg'
         />
       </div>
 

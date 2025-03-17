@@ -9,7 +9,7 @@
   }
   const Discovery: React.FC<DiscoveryProps> = ({ onPrev, onNext }) => {
     const [activeIndex, setActiveIndex] = useState<number>(0);
-  const [expandedIndex, setExpandedIndex] = useState<number | null>(null);
+    const [expandedIndex, setExpandedIndex] = useState<number | null>(0); 
 
   const sections = [
     {
@@ -108,48 +108,45 @@
   
           {/* Text Sections */}
           <motion.div
-            className="md:w-[50%] w-[95%]  mx-[5%]"
-            initial={{ opacity: 0, x: 30 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 1.5 }}
-          >
-            <div className="flex flex-col items-left  ">
-              {/* Tabs */}
-              {/* Static Section Tabs */}
-        <div className="flex items-start gap-4 mb-4 sticky top-0 bg-white z-10">
-          {sections.map((section, index) => (
-            <button
-              key={index}
-              className={`px-4 py-2 border-b-2 ${
-                activeIndex === index ? "border-black md:text-2xl font-semibold" : "border-gray-100 text-[#838282] md:text-2xl font-semibold"
-              }`}
-              onClick={() => setActiveIndex(index)}
-            >
-              {section.title}
-            </button>
-          ))}
-        </div>
-  
-              {/* Animated Content */}
-              {sections[activeIndex].faqs.map((faq, index) => (
+          className="md:w-[50%] w-[95%]  mx-[5%]"
+          initial={{ opacity: 0, x: 30 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 1.5 }}
+        >
+          <div className="flex flex-col items-left">
+            <div className="flex items-start gap-4 mb-4 sticky top-0 bg-white z-10">
+              {sections.map((section, index) => (
+                <button
+                  key={index}
+                  className={`px-4 py-2 border-b-2 ${
+                    activeIndex === index ? "border-black md:text-2xl font-semibold" : "border-gray-100 text-[#838282] md:text-2xl font-semibold"
+                  }`}
+                  onClick={() => {
+                    setActiveIndex(index);
+                    setExpandedIndex(index === 0 ? 0 : null); // Reset expanded index when switching sections
+                  }}
+                >
+                  {section.title}
+                </button>
+              ))}
+            </div>
+
+            {sections[activeIndex].faqs.map((faq, index) => (
               <div key={index} className="mb-4">
                 <div
-                  className="flex justify-between items-center cursor-pointer"
+                  className="flex  justify-between items-center cursor-pointer"
                   onClick={() => toggleFAQ(index)}
                 >
-                  <p className="text-lg font-semibold">{faq.question}</p>
-                  <Plus size={20} className={`transition-transform ${expandedIndex === index ? 'rotate-45' : ''}`} />
+                  <p className="text-2xl  question font-">{faq.question}</p>
+                  <Plus size={20} className={`transition-transform border-2 rounded ${expandedIndex === index ? 'rotate-45' : ''}`} />
                 </div>
                 {expandedIndex === index && (
-                  <p className="mt-2 answer text-gray-700">{faq.answer}</p>
+                  <p className="mt-2 answer text-xl font-bold text-gray-700">{faq.answer}</p>
                 )}
               </div>
             ))}
           </div>
-  
-  
-           
-          </motion.div>
+        </motion.div>
         </div>
       </div>
     );

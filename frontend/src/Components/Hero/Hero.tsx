@@ -140,21 +140,25 @@ const Hero = () => {
             >
               <X size={20} />
             </button> */}
-            <div className="flex flex-col gap-[1vh] justify-center w-fit">
+            <div className="flex flex-col gap-[1vh] justify-center items-center w-fit">
         
-              <button className="w-[16vw] h-[50px] text-black hover:text-black rounded-3xl px-[15%] bg-white hover:bg-gray-100 border-1 font-extralight border-gray-500 text-lg text-center shadow-md transition-all duration-300 ease-in-out transform hover:scale-105 hover:shadow-lg active:scale-95">
+              <button className="w-[18vw] h-[55px]  flex justify-center items-center gap-[2vw] text-white hover:text-black rounded-3xl px-[5%] bg-[#4556c6e6] hover:bg-gray-100 border-0 font-extralight border-gray-500 text-lg text-center shadow-md transition-all duration-300 ease-in-out transform hover:scale-105 hover:shadow-lg active:scale-95">
                 Book A Call With Us..!
+
+                <div
+          className="bg--500 rounded-full  border- p-2 border-grey-500  shadow-lg transition-all duration-300 ease-in-out transform hover:scale-110 hover:shadow-xl hover:bg-green-600 active:scale-90 animate-pulse cursor-pointer"
+          onClick={() => setIsVisible(true)}
+        >
+          <PhoneCall size={28} className="text-white hover:text-black" />
+        </div>
+
+
               </button>
 
             </div>
           </div>
         )}
-<div
-          className="bg-green-500 rounded-full p-5 h-[65px] shadow-lg transition-all duration-300 ease-in-out transform hover:scale-110 hover:shadow-xl hover:bg-green-600 active:scale-90 animate-pulse cursor-pointer"
-          onClick={() => setIsVisible(true)}
-        >
-          <PhoneCall size={28} className="text-white" />
-        </div>
+
       </div>
     </div>
 
@@ -194,7 +198,7 @@ const Hero = () => {
             <button className="bg-black text-white px-4 py-2 rounded-2xl hover:bg-gray-800">Subscribe</button>
           </div> */}
 
-          <article className="card py-[6vh]  bg-[#c9c7c7f7]">
+          <article className="cards py-[6vh]  bg-[#c9c7c7f7]">
             <div className="flex flex-col justify-center items-center gap-[2vh]">
               <button
                 className="absolute top-2 right-2 text-gray-500 hover:text-gray-800"
@@ -215,7 +219,7 @@ const Hero = () => {
                 placeholder="Enter your email"
                 className="w-[83%] text-[#000] pl-[15px] p-2 border-b-2 bg-[#ffffff13] border-blue-700 rounded-2xl mb-2"
               />
-              <button className="bg-[rgb(46,49,146)] text-white px-[3vw] py-[2vh] rounded-4xl hover:bg-[#2e3192]">
+              <button className="bg-[rgb(46,49,146)] text-2xl font-light shadow-2xl text-white px-[3vw] py-[2vh] rounded-4xl hover:bg-[#2e3192]">
                 Subscribe
               </button>
               <div className="w-[100%] ml-[9vh] flex flex-row align-middle justify-center items-center gap-[10px]">

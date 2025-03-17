@@ -67,15 +67,18 @@ const Contact = () => {
       {/* Parallax Section */}
       <Parallax
         strength={500}
-        bgImage="https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=2069&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+        bgImage="https://cdn.pixabay.com/photo/2023/11/21/06/57/bulb-8402558_1280.jpg"
         bgImageStyle={{
-          height: "70vh",
+          height: "90vh",
           width: "100vw",
           objectFit: "cover",
-          backgroundPosition: "center",
+          backgroundPosition: "center"
         }}
       >
         <div className="overflow-hidden w-full flex flex-col justify-center items-center">
+        <div className="absolute top-0 left-0 w-full h-[70vh] bg-black opacity-70 z-0"></div>
+
+
           <motion.div
             className="relative h-[70vh] flex flex-col gap-[2vh] justify-center items-center text-white text-lg p-20 min-w-[200vw]"
             initial={{ opacity: 0, scale: 0.9 }}
@@ -85,7 +88,7 @@ const Contact = () => {
           >
             {/* Title */}
             <motion.p
-              className="font-light text-2xl md:text-[6vw] text-white"
+              className="font-semibold text-2xl md:text-[7vw]  text-white"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 1 }}
