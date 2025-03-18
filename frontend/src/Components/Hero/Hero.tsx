@@ -51,7 +51,7 @@ const slides = [
 
 
 const Hero = () => {
-  const [isVisible, setIsVisible] = useState(true);
+  // const [isVisible, setIsVisible] = useState(true);
   const [showPopup, setShowPopup] = useState(false);
   const [currentIndex, setCurrentIndex] = useState(0);
 
@@ -143,7 +143,7 @@ const Hero = () => {
       {/* Function Text Box */}
       <div className="fixed justify-center align-middle z-100 md:w-fit rounded-2xl top-[94vh] w flex flex-row items-center shadow-3xl h-[20vh] left-[44vw] md:left-[75vw] md:top-[80vh]">
       <div className="flex  place-items-center  gap-[1vw]">
-        {isVisible && (
+     
           <div className="w-[] hidden md:flex flex-row rounded-2xl  shadow-2xl bg-transparent h-[] items-center justify-center gap-4 relative">
             {/* <button
               className="absolute top-2 right-2 p-2 bg-gray-200 rounded-full hover:bg-gray-300 transition-all"
@@ -171,7 +171,7 @@ const Hero = () => {
 
             </div>
           </div>
-        )}
+      
 
       </div>
     </div>
