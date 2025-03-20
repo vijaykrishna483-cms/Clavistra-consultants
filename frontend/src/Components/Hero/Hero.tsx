@@ -60,13 +60,6 @@ const slides = [
 const Hero = () => {
 
 
-  const [rootElement, setRootElement] = useState<HTMLElement | null>(null);
-
-  useEffect(() => {
-    const root = document.getElementById("root");
-    console.log("Root Element:", root); // Debugging
-    setRootElement(root);
-  }, []);
   
  const [showCPopup, setShowCPopup] = useState(false);
 
