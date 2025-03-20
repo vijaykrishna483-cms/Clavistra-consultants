@@ -159,7 +159,7 @@ const directHandle=()=>{
       {/* Function Text Box */}
       <div className="fixed justify-center align-middle  z-100 md:w-fit rounded-2xl top-[94vh] w flex flex-row items-center  h-[20vh] left-[44vw] md:left-[75vw] md:top-[80vh]">
         <div className="flex bg-transparent place-items-center  gap-[1vw]">
-          <div className="w-[]  md:flex flex-row rounded-2xl  bg-transparent h-[] items-center justify-center gap-4 relative">
+          <div className="w-[] hidden md:flex flex-row rounded-2xl  bg-transparent h-[] items-center justify-center gap-4 relative">
             <div
             
               className="flex flex-row gap-[1vh] justify-center items-center w-fit"
