@@ -26,7 +26,7 @@ const slides = [
     number: "01",
   },
   {
-    image: "https://images.unsplash.com/photo-1508780709619-79562169bc64?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    image: "https://images.unsplash.com/photo-1507646227500-4d389b0012be?q=80&w=2080&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     quote: "Refining and Redefining Brands",
     // functn: "You have a vision? | We have a solution",
     link: "https://www.youtube.com/",
@@ -34,7 +34,7 @@ const slides = [
   },
  
   {
-    image: "asasas.jpg",
+    image: "https://images.unsplash.com/photo-1508780709619-79562169bc64?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     quote: "We Implement & Deliver Results",
     // functn: "You have a vision? | We have a solution",
     link: "https://www.youtube.com/",
