@@ -2,7 +2,7 @@
 
 import { motion } from 'framer-motion';
 import Navbar from '../../Navbar/Navbar';
-import { FormEvent, SetStateAction, useEffect, useState } from 'react';
+import { FormEvent, useEffect, useState } from 'react';
 import { X, PhoneCall } from 'lucide-react';
 import emailjs from "@emailjs/browser";
 
