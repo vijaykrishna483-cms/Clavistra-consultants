@@ -45,18 +45,6 @@ const services = [
     link: "/brandanalysis",
   },
   {
-    title: "Influencer & Performance Marketing",
-    text: "We go beyond flashy campaigns to foster innovation and creativity.",
-    image: "https://th.bing.com/th/id/R.876b91cf5beff1d48572d02d19c0569a?rik=DzRhUCSlfqWxzQ&riu=http%3a%2f%2fexecutiveleader.com%2fwp-content%2fuploads%2f2017%2f09%2fInfulence.jpg&ehk=O2SzjHWwi010Ssucfly60nq%2f9YVVpTLzR3Wg5fHEr90%3d&risl=&pid=ImgRaw&r=0",
-    link: "/influencer",
-  },
-  {
-    title: "Website Development & Management",
-    text: "Take your social media game to the next level with our expert management.",
-    image: "https://i.pinimg.com/736x/30/27/bd/3027bda94ae45c94964a187482e3c4ad.jpg",
-    link: "/Website",
-  },
-  {
     title: "Social Media & Design Solution ",
     text: "Maximize your ROI with data-driven marketing strategies.",
     image: "https://i.pinimg.com/736x/df/81/ff/df81ff756d7b232bf5e54a82e9fb3243.jpg",
@@ -68,6 +56,21 @@ const services = [
     image: "https://i.pinimg.com/736x/1f/dd/6d/1fdd6d4964ba15d4b986c7c3b895c010.jpg",
     link: "/content",
   },
+
+
+  {
+    title: "Influencer & Performance Marketing",
+    text: "We go beyond flashy campaigns to foster innovation and creativity.",
+    image: "https://th.bing.com/th/id/R.876b91cf5beff1d48572d02d19c0569a?rik=DzRhUCSlfqWxzQ&riu=http%3a%2f%2fexecutiveleader.com%2fwp-content%2fuploads%2f2017%2f09%2fInfulence.jpg&ehk=O2SzjHWwi010Ssucfly60nq%2f9YVVpTLzR3Wg5fHEr90%3d&risl=&pid=ImgRaw&r=0",
+    link: "/influencer",
+  },
+  {
+    title: "Website Development & Management",
+    text: "Take your social media game to the next level with our expert management.",
+    image: "https://i.pinimg.com/736x/30/27/bd/3027bda94ae45c94964a187482e3c4ad.jpg",
+    link: "/Website",
+  },
+
   {
     title: "Financial Management & Compliance",
     text: "We craft experiences, not just websites.",
@@ -109,10 +112,7 @@ const Expertise = () => {
         <div className="flex md:flex-row flex-col align-baseline justify-between">
           <p className="font-light md:w-[70%]">
           We partner with businesses to craft data-driven strategies, define powerful brand architectures, and execute innovative digital solutions. With deep expertise across industries, we help you navigate complexity, unlock growth opportunities, and build sustainable competitive advantages—turning challenges into outcomes and ideas into lasting impact.          </p>
-          {/* <div className="flex mt-[3vh] md:w-[20%] items-center text-lg">
-            <p>All Services</p>
-            <ArrowUpRight size={24} strokeWidth={2} />
-          </div> */}
+      
         </div>
       </motion.div>
 
@@ -208,58 +208,18 @@ const Expertise = () => {
   </motion.div>
   <div className="w-full px-[10%] py-[9vh] grid grid-cols-1 md:grid-cols-3 gap-8">
   {services.map((service, index) => (
-    // <motion.div
-    //   key={index}
-    //   onClick={() => navigate(service.link)}
-    //   initial={{ opacity: 0, y: 50, scale: 0.9 }}
-    //   whileInView={{ opacity: 1, y: 0, scale: 1 }}
-    //   transition={{ duration: 0.5, ease: "easeOut" }}
-    //   whileHover={{ y: -10, boxShadow: "0px 10px 30px rgba(0,0,0,0.1)" }}
-    //   className="relative h-[55vh] md:h-[63vh] rounded-2xl w-full bg-cover bg-center cursor-pointer flex items-end p-6 overflow-hidden"
-    //   style={{ backgroundImage: `url(${service.image})` }}
-    // >
- 
-
-    //   <motion.div className="relative z-10 text-white">
-    //     <h2 className="md:text-2xl text-xl font-bold">{service.title}</h2>
-    //     <p className="md:text-sm md:mt-2 w-[80%]">{service.text}</p>
-    //     <p className="md:mt-2 w-[80%] uppercase left-6 text-white md:text-md text-xs font-lighter underline">
-    //       Explore {service.title}
-    //     </p>
-    //   </motion.div>
-    //   <motion.div
-    //     className="absolute inset-0 bg-[#0b0b0b1d] bg-opacity-50 transition-all duration-300 ease-in-out"
-        
-     
-    //   />
-
-    //   <motion.div className="bottom-4 right-4 duration-300 z-20">
-    //     <IoIosArrowDroprightCircle className="text-7xl font-light text-[#ffffff]" />
-    //   </motion.div>
-    // </motion.div>
   
-
-
-
 <article className="card"   
 onClick={() => navigate(service.link)}
 key={index}  style={{ backgroundImage: `url(${service.image})` }}
     
       >
-  {/* <img
-    className="card__background"
-    src={service.image}
-    alt="Photo of Cartagena's cathedral at the background and some colonial style houses"
-    width="1920"
-    height="2193"
-  /> */}
 
-  
   <div 
   
   className="card__content | flow">
     <div className="card__content--container | flow ">
-      <h2 className="card__title ">{service.title}</h2>
+      <h2 className="card__title mb-[5vh]">{service.title}</h2>
       <p className="card__description">
       {service.text}
       </p>

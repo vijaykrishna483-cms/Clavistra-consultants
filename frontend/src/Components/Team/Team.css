@@ -23,7 +23,7 @@
     width: 100%;
     height: 0;
     border-radius: 50%;
-    background-color: #000000;
+    background-color: #2e3192;
     position: absolute;
     bottom: 135%;
     right: 0;
@@ -42,7 +42,7 @@
     width: 100%;
     height: 100%;
     border-radius: 50%;
-    background-color: #000000;
+    background-color: #2e3192;
     position: absolute;
     top: 0;
     left: 0;
@@ -65,17 +65,20 @@
   
   .our-team .title {
     display: block;
-    font-size: 15px;
+    margin-top: 8px;
+    font-size: 18px;
     color: #4e5052;
     text-transform: capitalize;
   }
-  
+  .name{
+    font-size: 21px;
+  }
   .our-team .social {
     width: 100%;
     height: 10%;
     /* padding-: 0; */
     margin: 0;
-    background-color: #000000;
+    background-color: #2e3192;
     position: absolute;
     bottom: -100px;
     left: 0;
@@ -100,7 +103,7 @@
   }
   
   .our-team .social li a:hover {
-    color: #000000;
+    color: #2e3192;
     background-color: #fff;
   }
   

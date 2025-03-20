@@ -1,24 +1,67 @@
+import emailjs from "@emailjs/browser";
 
 
 import { motion } from 'framer-motion';
 import Navbar from '../../Navbar/Navbar';
-import { useState } from 'react';
+import {  FormEvent, useEffect, useState } from 'react';
 import { X, PhoneCall } from 'lucide-react';
 
+
+// Define type for card data structure
+interface Card {
+  title: string;
+  text: string;
+  imgSrc: string;
+}
+
+
+
 const SocialMedia = () => {
+   const [showPopup, setShowPopup] = useState<boolean>(false);
+  const [selectedCard, setSelectedCard] = useState<Card | null>(null);
 
-
-
-
-  const [showPopup, setShowPopup] = useState(false);
-  const clickHdnler=()=>{
+  const handleCardClick = (card: Card) => {
+    setSelectedCard(card);
     setShowPopup(true);
-  
-  }
+  };
+
+
+useEffect(() => {
+  // Scroll to the bottom first
+  window.scrollTo(0, document.body.scrollHeight);
+
+  // After a short delay, smoothly scroll to the top
+  setTimeout(() => {
+    smoothScrollToTop();
+  }, 500); // Delay before scrolling up
+}, []);
+
+// Smooth scroll function
+const smoothScrollToTop = () => {
+  const scrollStep = -window.scrollY / 30; // Adjust steps for smoothness
+  const scrollInterval = setInterval(() => {
+    if (window.scrollY === 0) {
+      clearInterval(scrollInterval);
+    } else {
+      window.scrollBy(0, scrollStep);
+    }
+  }, 15); // Adjust interval for speed
+};
+
+
+const sendEmail = (e: FormEvent<HTMLFormElement>) => {
+  e.preventDefault();
+  emailjs.sendForm(
+    "service_4bjtg5w",
+    "template_rqxa83f",
+    e.target as HTMLFormElement,
+    "hEOfHJqTU-k_3aG_e"
+  );
+};
 
 
   
-  const cardData = [
+  const cardData: Card[] = [
     { title: ' UX/UI Design & Optimization', text: 'Create visually stunning and user-friendly designs that enhance engagement and usability', imgSrc: 'https://images.unsplash.com/vector-1738220730375-b8cc95268acd?q=80&w=2360&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D' },
     { title: 'E-commerce Setup & Optimization', text: 'Build and optimize online stores for seamless shopping experiences and increased sales.', imgSrc: 'https://images.unsplash.com/vector-1739647326772-c15a9c69215d?q=80&w=2360&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D' },
     { title: 'Website Maintenance & Security', text: 'Ensure your website stays secure, up-to-date, and running smoothly at all times.', imgSrc: 'https://images.unsplash.com/vector-1739128047857-cd4336451f32?q=80&w=2360&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D' },
@@ -76,7 +119,7 @@ const SocialMedia = () => {
           initial={{ opacity: 0, x: 50 }}
           whileInView={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8, ease: "easeOut" }}
-          src='https://i.pinimg.com/736x/30/27/bd/3027bda94ae45c94964a187482e3c4ad.jpg' 
+          src='https://images.unsplash.com/photo-1590608897129-79da98d15969?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D' 
           alt='Performance Marketing' 
           className='md:absolute relative md:ml-[46vw] w-[95vw]  backdrop-shadow md:w-[40vw] md:mb-[20vh] rounded-lg md:h-[55vh] shadow-blue-500/50'
         />
@@ -115,7 +158,7 @@ const SocialMedia = () => {
       <div className='px-[5%] md:flex-row flex-col flex justify-center  gap-[3vw] md:px-[10%] py-10'>
         {cardData.slice(0, 3).map((card, index) => (
           <motion.div 
-          onClick={clickHdnler}
+           onClick={() => handleCardClick(card)}
 
             key={index} 
             initial={{ opacity: 0, y: 30 }}
@@ -133,7 +176,7 @@ const SocialMedia = () => {
       <div className='px-[5%] md:flex-row flex-col flex justify-center  gap-[3vw] md:px-[10%] py-10'>
         {cardData.slice(3).map((card, index) => (
           <motion.div 
-          onClick={clickHdnler}
+           onClick={() => handleCardClick(card)}
 
             key={index} 
             initial={{ opacity: 0, y: 30 }}
@@ -153,49 +196,56 @@ const SocialMedia = () => {
 
 
 
-      {showPopup && (
-        <div className=" fixed  w-[100vw] h-[100vh] inset-0 flex items-center justify-center bg-[#1b1616c1] bg-opacity-50 z-50">
-        
-          <article className="md:w-[40vw] w-[90vw] cards py-[6vh]  bg-[#c9c7c7f7]">
-            <div className="flex flex-col justify-center items-center gap-[2vh]">
-              <button
-                className="absolute top-2 right-2 text-gray-500 hover:text-gray-800"
-                onClick={() => setShowPopup(false)}
-              >
-                <X size={40} />
-              </button>
+     
+      {showPopup && selectedCard && (
+  <div className="fixed w-[100vw] h-[100vh] inset-0 flex items-center justify-center bg-[#1b1616c1] bg-opacity-50 z-50 transition-opacity duration-300 ease-in-out">
+    <article className="md:w-[40vw] w-[90vw] cards py-[6vh] bg-white bg-opacity-90 rounded-2xl shadow-xl relative transform transition-all duration-300 ease-in-out scale-95 hover:scale-100">
+      <button
+        className="absolute top-2 right-2 text-gray-500 hover:text-gray-800 transition-all duration-200 ease-in-out transform hover:scale-110"
+        onClick={() => setShowPopup(false)}
+      >
+        <X size={40} />
+      </button>
 
-              <img src="thefinal.png" className="w-[18vw]" />
-              <h2 className="text-3xl md:text-6xl font-bold mb-1 text-[#000]">
-                Sign Up Now!
-              </h2>
-              <p className="text-md text-center md:text-2xl text-[#3a3838] font-lighter">
-                For exclusive marketing news 
-              </p>
-              <input
-                type="email"
-                placeholder="Enter your email"
-                className="w-[83%] text-[#000] pl-[15px] p-2 border-b-2 bg-[#ffffff13] border-blue-700 rounded-2xl mb-2"
-              />
-              <button className="bg-[rgb(46,49,146)] text-xl md:text-3xl font-light shadow-2xl text-white px-[3vw] py-[2vh] rounded-4xl hover:bg-[#2e3192]">
-                Subscribe
-              </button>
-              <div className="w-[100%] md:ml-[9vh] flex flex-row align-middle justify-center items-center gap-[10px]">
-                <button className="md:w-[90%] md:h-[50px] w-[80%] px-[2%] text-black rounded-3xl bg-transparent border-2 border-[#6c6969] text-center font-extralight align-middle ">
-                  Book A call With Us..!
-                </button>
-                <div className="bg-[#179e17] rounded-full p-[15px]">
-                  <PhoneCall size={24} />
-                </div>
-              </div>
-            </div>
-            <span className="top"></span>
-            <span className="right"></span>
-            <span className="bottom"></span>
-            <span className="left"></span>
-          </article>
+      <img src="thefinal.png" className="w-[30vw] md:w-[15vw] mx-auto mb-4 rounded-lg " />
+      <h2 className="text-3xl md:text-2xl font-extralight mb-1 text-black text-center">Want to know more!</h2>
+      <h2 className="text-2xl md:text-2xl font-semibold mb-1 text-black text-center">
+        About {selectedCard.title}
+      </h2>
+
+      <form
+  className="contact-form mt-4 w-[80%] flex items-center gap-2 border-2 rounded-3xl border-blue-700 focus-within:ring-2 focus-within:ring-blue-500 transition-all duration-200"
+  onSubmit={sendEmail}
+>
+  <input
+    type="text"
+    name="email_from"
+    id="emailFrom"
+    placeholder="Enter your email"
+    className="w-full h-[40px] text-black bg-transparent pl-4 outline-none placeholder-gray-500"
+  />
+  <button
+    type="submit"
+    className="h-[40px] px-6 bg-[#2e3192] text-white font-semibold rounded-2xl transition-all duration-300 ease-in-out transform hover:scale-105 hover:bg-blue-600"
+  >
+    Submit
+  </button>
+</form>
+
+
+      <div className="w-[80%] md:ml-[9vh] mt-[2vh] flex flex-row justify-center items-center gap-[10px]">
+        <button className="md:w-[90%] md:h-[50px] h-[60px] w-[80%] px-[2%] text-black rounded-3xl bg-transparent border-2 border-[#6c6969] text-center font-extralight hover:bg-gray-200 transition-all duration-200">
+          Book A Call With Us!
+        </button>
+        <div className="bg-[#179e17] rounded-full p-[15px] shadow-lg transition-transform duration-200 ease-in-out transform hover:scale-110">
+          <PhoneCall size={24} />
         </div>
-      )}
+      </div>
+
+    </article>
+  </div>
+)}
+
 
       
     </div>

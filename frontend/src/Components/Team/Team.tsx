@@ -1,4 +1,4 @@
-import {  Twitter, Instagram, Linkedin } from "lucide-react";
+import {  Linkedin } from "lucide-react";
 // import Team1 from "../../assets/team1.png";
 // import Team2 from "../../assets/team2.png";
 // import Team3 from "../../assets/team3.png";
@@ -23,7 +23,7 @@ Meet Our Core Team
 
       {/* Animated Subheading */}
       <motion.h1
-        className="text-lg md:text-2xl mt-[2vh] text-[#004aad] font-semibold md:w-[90%] leading-tight"
+        className="text-lg md:text-2xl mt-[2vh] text-[#2e3192] font-semibold md:w-[90%] leading-tight"
         whileInView={{ opacity: 1, x: 0 }}
         initial={{ opacity: 0, x: -20 }}
         transition={{ duration: 1.2 }}
@@ -34,39 +34,39 @@ Our team brings together experienced management consultants, startup leaders, to
 
 
 
-<div className="container mt-[8vh]">
-  <div className="row flex md:flex-row flex-col justify-around gap-[2vw]">
+<div className="container mt-[8vh] ">
+  <div className="row flex md:flex-row flex-col justify-center md:justify-around gap-[2vw] md:ml-[0] ml-[3vw]">
     <div className="col-12 col-sm-6 col-md-4 col-lg-3">
       <div className="our-team md:w-[18vw] w-[80vw] shadow-xl rounded-2xl">
         <div className="picture">
           <img className="img-fluid" src="image2.jpg"/>
         </div>
         <div className="team-content">
-          <h3 className="name">Goutham</h3>
-          <h4 className="title">IIT Madras, consultant  <br/> Your 0-1 journey Guy</h4>
+          <h3 className="name">K Goutham</h3>
+          <h4 className="title">IIT Madras, consultant </h4>
         </div>
         <ul className="social flex gap-[10px] justify-around py-[4px]">
         <a href="https://www.linkedin.com/in/goutham-kumaresan-8aa594b9?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app"><Linkedin className="text-white"/></a>
-          <li><Instagram className="text-white"/></li>
-          <li><Twitter className="text-white"/></li>
+          {/* <li><Instagram className="text-white"/></li>
+          <li><Twitter className="text-white"/></li> */}
 
           
         </ul>
       </div>
     </div>
-        <div className="col-12 col-sm-6 col-md-4 col-lg-3">
+        <div className="col-12 col-sm-6 col-md-4 col-lg-3 ">
       <div className="our-team md:w-[18vw] w-[80vw] shadow-xl rounded-2xl">
         <div className="picture">
           <img className="img-fluid" src="image1.jpg"/>
         </div>
         <div className="team-content">
           <h3 className="name">CA Purva Batra</h3>
-          <h4 className="title">AIR 37<br/> Finance and Tax Consultant </h4>
+          <h4 className="title"> Finance and Tax Consultant </h4>
         </div>
         <ul className="social flex gap-[10px] justify-around py-[4px]">
         <a href="https://in.linkedin.com/in/purva-batra-49457a17b"><Linkedin className="text-white"/></a>
-          <li><Instagram className="text-white"/></li>
-          <li><Twitter className="text-white"/></li>
+          {/* <li><Instagram className="text-white"/></li>
+          <li><Twitter className="text-white"/></li> */}
 
          
         </ul>
@@ -79,12 +79,11 @@ Our team brings together experienced management consultants, startup leaders, to
         </div>
         <div className="team-content">
           <h3 className="name">Vaishali Singh</h3>
-          <h4 className="title">Marketing Expert  <br/> Graphic Designer</h4>
+          <h4 className="title">Marketing Consultant </h4>
         </div>
        <ul className="social flex gap-[10px] justify-around py-[4px]">
        <a ><Linkedin className="text-white"/></a>
-          <a href="https://www.instagram.com/vaishali001?igsh=MTJ6dTZjNWY4dXVibw=="><Instagram className="text-white"/></a>
-          <li><Twitter className="text-white"/></li>
+         
 
          
         </ul>
@@ -96,14 +95,14 @@ Our team brings together experienced management consultants, startup leaders, to
           <img className="img-fluid" src="image4.jpg"/>
         </div>
         <div className="team-content">
-          <h3 className="name">Adv.Samuel M Philip</h3>
-          <h4 className="title"> Add. Director Holy <br/> Kingdom Group of Schools</h4>
+          <h3 className="name">Samuel M Philip</h3>
+          <h4 className="title">Lawyer & Legal Consultant</h4>
           
         </div>
        <ul className="social flex gap-[10px] justify-around py-[4px]">
        <a href=""><Linkedin className="text-white"/></a>
-          <a href="https://www.instagram.com/imsamuel26?igsh=MTJweGR5eGZyaGFiOQ=="><Instagram className="text-white"/></a>
-          <li><Twitter className="text-white"/></li>
+          {/* <a href="https://www.instagram.com/imsamuel26?igsh=MTJweGR5eGZyaGFiOQ=="><Instagram className="text-white"/></a>
+          <li><Twitter className="text-white"/></li> */}
 
           
         </ul>

@@ -2,46 +2,54 @@ import { useState, useEffect } from "react";
 import { ChevronRight, ChevronLeft } from "lucide-react";
 
 import Navbar from "../Navbar/Navbar";
-
-import {  PhoneCall, X } from "lucide-react";
+import { FaWhatsapp } from "react-icons/fa";
+import { PhoneCall, X } from "lucide-react";
 import "./Hero.css";
+import { InlineWidget } from "react-calendly";
+
 
 
 const openWhatsApp = () => {
-  const phoneNumber = "+916238196861"; 
-  const message = "Hello! I'm interested in your services."; 
-  const url = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+
+
+  const phoneNumber = "+916382355601";
+  const message = "Hello! I'm interested in your services.";
+  const url = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(
+    message
+  )}`;
 
   window.open(url, "_blank");
 };
 
-
-
 const slides = [
   {
-    image: "https://images.unsplash.com/photo-1553877522-43269d4ea984?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    image:
+      "https://images.unsplash.com/photo-1553877522-43269d4ea984?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     quote: "Transforming Your Vision to Reality",
     // functn: "You have a vision? | We have a solution",
     link: "https://www.youtube.com/",
     number: "01",
   },
   {
-    image: "https://images.unsplash.com/photo-1507646227500-4d389b0012be?q=80&w=2080&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    image:
+      "https://images.unsplash.com/photo-1507646227500-4d389b0012be?q=80&w=2080&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     quote: "Refining and Redefining Brands",
     // functn: "You have a vision? | We have a solution",
     link: "https://www.youtube.com/",
     number: "02",
   },
- 
+
   {
-    image: "https://images.unsplash.com/photo-1508780709619-79562169bc64?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    image:
+      "https://images.unsplash.com/photo-1508780709619-79562169bc64?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     quote: "We Implement & Deliver Results",
     // functn: "You have a vision? | We have a solution",
     link: "https://www.youtube.com/",
     number: "03",
   },
   {
-    image: "https://images.unsplash.com/photo-1582578598774-a377d4b32223?q=80&w=2071&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    image:
+      "https://images.unsplash.com/photo-1582578598774-a377d4b32223?q=80&w=2071&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     quote: "Let's Get started",
     // functn: "You have a vision? | We have a solution",
     link: "https://www.youtube.com/",
@@ -49,8 +57,23 @@ const slides = [
   },
 ];
 
-
 const Hero = () => {
+
+
+  const [rootElement, setRootElement] = useState<HTMLElement | null>(null);
+
+  useEffect(() => {
+    const root = document.getElementById("root");
+    console.log("Root Element:", root); // Debugging
+    setRootElement(root);
+  }, []);
+  
+ const [showCPopup, setShowCPopup] = useState(false);
+
+const directHandle=()=>{
+  setShowCPopup(true)
+}
+
   // const [isVisible, setIsVisible] = useState(true);
   const [showPopup, setShowPopup] = useState(false);
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -141,40 +164,30 @@ const Hero = () => {
       </div>
 
       {/* Function Text Box */}
-      <div className="fixed justify-center align-middle z-100 md:w-fit rounded-2xl top-[94vh] w flex flex-row items-center shadow-3xl h-[20vh] left-[44vw] md:left-[75vw] md:top-[80vh]">
-      <div className="flex  place-items-center  gap-[1vw]">
-     
-          <div className="w-[] hidden md:flex flex-row rounded-2xl  shadow-2xl bg-transparent h-[] items-center justify-center gap-4 relative">
-            {/* <button
-              className="absolute top-2 right-2 p-2 bg-gray-200 rounded-full hover:bg-gray-300 transition-all"
-              onClick={() => setIsVisible(false)}
-            >
-              <X size={20} />
-            </button> */}
+      <div className="fixed justify-center align-middle  z-100 md:w-fit rounded-2xl top-[94vh] w flex flex-row items-center  h-[20vh] left-[44vw] md:left-[75vw] md:top-[80vh]">
+        <div className="flex bg-transparent place-items-center  gap-[1vw]">
+          <div className="w-[]  md:flex flex-row rounded-2xl  bg-transparent h-[] items-center justify-center gap-4 relative">
             <div
-            onClick={openWhatsApp}
-            className="flex flex-col gap-[1vh] justify-center items-center w-fit">
-        
-              <button
-               className="w-[21vw] px-[5%] h-[55px] text-xl font-bold  flex justify-between items-center gap-[vw] text-white hover:text-black rounded-3xl mr-[2vw] bg-[#4556c6e6] hover:bg-gray-100 border-0  border-gray-500 text-center shadow-md transition-all duration-300 ease-in-out transform hover:scale-105 hover:shadow-lg active:scale-95">
-                Book A Call With Us!
-
-                <div
-          className=" rounded-full  border- p-2 border-grey-500  shadow-lg transition-all duration-300 ease-in-out transform hover:scale-110 hover:shadow-xl hover:bg-green-600 active:scale-90 animate-pulse cursor-pointer"
-          
-        >
-          <PhoneCall size={28} className="text-white hover:text-black" />
-        </div>
-
+            
+              className="flex flex-row gap-[1vh] justify-center items-center w-fit"
+            >
+              <button onClick={directHandle} className="w-[18vw] px-[5%] py-[10px] text-xl font-light  flex justify-between items-center gap-[vw] text-white hover:text-black rounded-full  bg-[#4556c6e6]  border-0  border-gray-500 text-center shadow-md transition-all duration-300 ease-in-out transform hover:scale-105 hover:shadow-lg active:scale-95">
+             
+              Book A Call With Us!
+              
+   
 
               </button>
-
+   
+              <div 
+                onClick={openWhatsApp}
+              className=" rounded-full bg-[#fff] border- mb-[vh] p-4 border-grey-500  shadow-lg transition-all duration-300 ease-in-out transform hover:scale-110 hover:shadow-xl hover:bg-green-600 active:scale-90 animate-pulse cursor-pointer">
+                <FaWhatsapp size={28} color="green" />
+              </div>
             </div>
           </div>
-      
-
+        </div>
       </div>
-    </div>
 
       {/* Navigation Dots */}
       <div className="absolute bottom-20 left-[5vw] transform -translate-x-1/2 flex flex-col space-y-3 z-40">
@@ -201,7 +214,6 @@ const Hero = () => {
       </div>
       {showPopup && (
         <div className=" fixed  w-[100vw] h-[100vh] inset-0 flex items-center justify-center bg-[#1b1616c1] bg-opacity-50 z-50">
-        
           <article className="md:w-[40vw] w-[90vw] cards py-[6vh]  bg-[#c9c7c7f7]">
             <div className="flex flex-col justify-center items-center gap-[2vh]">
               <button
@@ -216,7 +228,7 @@ const Hero = () => {
                 Sign Up Now!
               </h2>
               <p className="text-md text-center md:text-2xl text-[#3a3838] font-lighter">
-                For exclusive marketing news 
+                For exclusive marketing news
               </p>
               <input
                 type="email"
@@ -242,6 +254,10 @@ const Hero = () => {
           </article>
         </div>
       )}
+
+{showCPopup?<div className="backdrop-blur-md  overflow-hidden relative z-999 min-h-screen"> <InlineWidget url="https://calendly.com/vijay762005/30min" />  </div> :<>  </>}
+
+
     </div>
   );
 };

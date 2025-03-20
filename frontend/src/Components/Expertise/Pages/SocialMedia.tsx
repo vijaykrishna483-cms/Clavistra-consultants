@@ -2,19 +2,65 @@
 
 import { motion } from 'framer-motion';
 import Navbar from '../../Navbar/Navbar';
-import { useState } from 'react';
+import { FormEvent, SetStateAction, useEffect, useState } from 'react';
 import { X, PhoneCall } from 'lucide-react';
+import emailjs from "@emailjs/browser";
+
+
+// Define type for card data structure
+interface Card {
+  title: string;
+  text: string;
+  imgSrc: string;
+}
+
+
 
 const Socialmedia = () => {
+  const [showPopup, setShowPopup] = useState<boolean>(false);
+  const [selectedCard, setSelectedCard] = useState<Card | null>(null);
+  const sendEmail = (e: FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    emailjs.sendForm(
+      "service_4bjtg5w",
+      "template_rqxa83f",
+      e.target as HTMLFormElement,
+      "hEOfHJqTU-k_3aG_e"
+    );
+  };
 
-  const [showPopup, setShowPopup] = useState(false);
-  const clickHdnler=()=>{
-    setShowPopup(true);
-  
-  }
+
+  useEffect(() => {
+    // Scroll to the bottom first
+    window.scrollTo(0, document.body.scrollHeight);
+
+    // After a short delay, smoothly scroll to the top
+    setTimeout(() => {
+      smoothScrollToTop();
+    }, 500); // Delay before scrolling up
+  }, []);
+
+  // Smooth scroll function
+  const smoothScrollToTop = () => {
+    const scrollStep = -window.scrollY / 30; // Adjust steps for smoothness
+    const scrollInterval = setInterval(() => {
+      if (window.scrollY === 0) {
+        clearInterval(scrollInterval);
+      } else {
+        window.scrollBy(0, scrollStep);
+      }
+    }, 15); // Adjust interval for speed
+  };
 
   
-  const cardData = [
+const handleCardClick = (card: Card) => {
+  setSelectedCard(card);
+  setShowPopup(true);
+};
+
+
+  
+  const cardData: Card[] = [
     { title: 'Social Media Strategy & Management', text: 'Develop and execute data-driven strategies to enhance engagement and brand presence.', imgSrc: 'https://images.unsplash.com/vector-1741695667949-5b89ed5c65be?q=80&w=2360&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D' },
     { title: ' Creative Design & Branding Assets', text: 'Craft visually compelling graphics that strengthen brand identity and recognition.', imgSrc: 'https://images.unsplash.com/vector-1741240041535-9a1d6d945c93?q=80&w=2148&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D' },
     { title: 'Community Engagement & Growth Strategies', text: 'Foster meaningful interactions and build loyal online communities', imgSrc: 'https://images.unsplash.com/vector-1741097263399-022b8b0f776f?q=80&w=2360&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D' },
@@ -111,7 +157,7 @@ const Socialmedia = () => {
         {cardData.slice(0, 4).map((card, index) => (
           <motion.div 
             key={index} 
-            onClick={clickHdnler}
+               onClick={() => handleCardClick(card)}
 
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -129,7 +175,7 @@ const Socialmedia = () => {
         {cardData.slice(4).map((card, index) => (
           <motion.div 
             key={index} 
-            onClick={clickHdnler}
+               onClick={() => handleCardClick(card)}
 
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -146,49 +192,58 @@ const Socialmedia = () => {
 
 
 
-      {showPopup && (
-        <div className=" fixed  w-[100vw] h-[100vh] inset-0 flex items-center justify-center bg-[#1b1616c1] bg-opacity-50 z-50">
-        
-          <article className="md:w-[40vw] w-[90vw] cards py-[6vh]  bg-[#c9c7c7f7]">
-            <div className="flex flex-col justify-center items-center gap-[2vh]">
-              <button
-                className="absolute top-2 right-2 text-gray-500 hover:text-gray-800"
-                onClick={() => setShowPopup(false)}
-              >
-                <X size={40} />
-              </button>
+     
+      {showPopup && selectedCard && (
+  <div className="fixed w-[100vw] h-[100vh] inset-0 flex items-center justify-center bg-[#1b1616c1] bg-opacity-50 z-50 transition-opacity duration-300 ease-in-out">
+    <article className="md:w-[40vw] w-[90vw] cards py-[6vh] bg-white bg-opacity-90 rounded-2xl shadow-xl relative transform transition-all duration-300 ease-in-out scale-95 hover:scale-100">
+      <button
+        className="absolute top-2 right-2 text-gray-500 hover:text-gray-800 transition-all duration-200 ease-in-out transform hover:scale-110"
+        onClick={() => setShowPopup(false)}
+      >
+        <X size={40} />
+      </button>
 
-              <img src="thefinal.png" className="w-[18vw]" />
-              <h2 className="text-3xl md:text-6xl font-bold mb-1 text-[#000]">
-                Sign Up Now!
-              </h2>
-              <p className="text-md text-center md:text-2xl text-[#3a3838] font-lighter">
-                For exclusive marketing news 
-              </p>
-              <input
-                type="email"
-                placeholder="Enter your email"
-                className="w-[83%] text-[#000] pl-[15px] p-2 border-b-2 bg-[#ffffff13] border-blue-700 rounded-2xl mb-2"
-              />
-              <button className="bg-[rgb(46,49,146)] text-xl md:text-3xl font-light shadow-2xl text-white px-[3vw] py-[2vh] rounded-4xl hover:bg-[#2e3192]">
-                Subscribe
-              </button>
-              <div className="w-[100%] md:ml-[9vh] flex flex-row align-middle justify-center items-center gap-[10px]">
-                <button className="md:w-[90%] md:h-[50px] w-[80%] px-[2%] text-black rounded-3xl bg-transparent border-2 border-[#6c6969] text-center font-extralight align-middle ">
-                  Book A call With Us..!
-                </button>
-                <div className="bg-[#179e17] rounded-full p-[15px]">
-                  <PhoneCall size={24} />
-                </div>
-              </div>
-            </div>
-            <span className="top"></span>
-            <span className="right"></span>
-            <span className="bottom"></span>
-            <span className="left"></span>
-          </article>
+      <img src="thefinal.png" className="w-[30vw] md:w-[15vw] mx-auto mb-4 rounded-lg " />
+      <h2 className="text-3xl md:text-2xl font-extralight mb-1 text-black text-center">Want to know more!</h2>
+      <h2 className="text-2xl md:text-2xl font-semibold mb-1 text-black text-center">
+        About {selectedCard.title}
+      </h2>
+
+      <form
+  className="contact-form mt-4 w-[80%] flex items-center gap-2 border-2 rounded-3xl border-blue-700 focus-within:ring-2 focus-within:ring-blue-500 transition-all duration-200"
+  onSubmit={sendEmail}
+>
+  <input
+    type="text"
+    name="email_from"
+    id="emailFrom"
+    placeholder="Enter your email"
+    className="w-full h-[40px] text-black bg-transparent pl-4 outline-none placeholder-gray-500"
+  />
+  <button
+    type="submit"
+    className="h-[40px] px-6 bg-[#2e3192] text-white font-semibold rounded-2xl transition-all duration-300 ease-in-out transform hover:scale-105 hover:bg-blue-600"
+  >
+    Submit
+  </button>
+</form>
+
+
+      <div className="w-[80%] md:ml-[9vh] mt-[2vh] flex flex-row justify-center items-center gap-[10px]">
+        <button className="md:w-[90%] md:h-[50px] h-[60px] w-[80%] px-[2%] text-black rounded-3xl bg-transparent border-2 border-[#6c6969] text-center font-extralight hover:bg-gray-200 transition-all duration-200">
+          Book A Call With Us!
+        </button>
+        <div className="bg-[#179e17] rounded-full p-[15px] shadow-lg transition-transform duration-200 ease-in-out transform hover:scale-110">
+          <PhoneCall size={24} />
         </div>
-      )}
+      </div>
+
+    </article>
+  </div>
+)}
+
+
+
 
 
       

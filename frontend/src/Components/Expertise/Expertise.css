@@ -84,7 +84,7 @@
   flex-direction: column;
   justify-content: space-between;
   align-self: flex-end;
-  height: 70%;
+  height: 90%;
   padding: 0% 1.25rem 1.875rem;
   background: linear-gradient(
     180deg,
@@ -198,6 +198,7 @@
     transition: opacity 500ms ease-in, transform 500ms ease-in;
     transition-delay: 500ms;
   }
+  
 }
 
 

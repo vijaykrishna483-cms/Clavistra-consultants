@@ -7,6 +7,18 @@ const Contact = () => {
   const words = ["Hello", "Hola"];
   const [index, setIndex] = useState(0);
 
+  const openWhatsApp = () => {
+
+
+    const phoneNumber = "+916382355601";
+    const message = "Hello! I'm interested in your services.";
+    const url = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(
+      message
+    )}`;
+  
+    window.open(url, "_blank");
+  };
+  
   useEffect(() => {
     const interval = setInterval(() => {
       setIndex((prevIndex) => (prevIndex + 1) % words.length);
@@ -16,7 +28,7 @@ const Contact = () => {
   }, []);
 
   return (
-    <div className="w-[100vw] h-full mt-[30vh]">
+    <div id="contact-us" className="w-[100vw] h-full mt-[20vh]">
 {/*      
       <div className="px-[6%] md:px-[10%] mb-[15vh]">
       
@@ -125,6 +137,7 @@ const Contact = () => {
               whileInView={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.8, delay: 0.2 }}
               viewport={{ once: true }}
+              onClick={openWhatsApp}
             >
               Let's Talk
             </motion.button>

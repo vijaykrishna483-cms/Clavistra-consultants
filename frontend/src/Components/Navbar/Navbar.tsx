@@ -9,12 +9,11 @@ const Navbar = () => {
   const [active, setActive] = useState<number | null>(null);
   const [isScrolled, setIsScrolled] = useState(false);
 
-  const navItems = ["HOME", "OUR SERVICES", "ABOUT US", "BLOG","CONTACT US"];
+  const navItems = ["HOME", "OUR SERVICES", "ABOUT US", "BLOG", "CONTACT US"];
 
-  // Detect Scroll Position
   useEffect(() => {
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 40); // Change styles when scrolled beyond 40px
+      setIsScrolled(window.scrollY > 40);
     };
 
     window.addEventListener("scroll", handleScroll);
@@ -46,7 +45,7 @@ const Navbar = () => {
                       behavior: "smooth",
                     });
                 }}
-                className="relative cursor-pointer px-2 py-2 overflow-hidden"
+                className={`relative cursor-pointer px-2 py-2 overflow-hidden ${item === "BLOG" ? "text-gray-500" : ""}`}
               >
                 <motion.div
                   initial={{ scaleX: 0 }}
@@ -54,8 +53,7 @@ const Navbar = () => {
                   whileHover={{ scaleX: 1 }} // Underline appears on hover
                   transition={{ duration: 0.3, ease: "easeInOut" }}
                   className={`absolute bottom-0 left-0 w-full h-[2px]
-                    ${  isScrolled ? " bg-black" : " bg-white"
-                      }`}
+                    ${isScrolled ? " bg-black" : " bg-white"}`}
                 />
                 <span className="relative z-10 text-xl font-semibold transition duration-300">
                   {item}
@@ -108,27 +106,23 @@ const Navbar = () => {
                   setActive(index);
                   setOpen(false); // Close menu on click
                 }}
-                className="cursor-pointer border-b py-[1vh] border-gray-500/30 hover:text-gray-300 transition duration-300"
+                className={`cursor-pointer border-b py-[1vh] border-gray-500/30 hover:text-gray-300 transition duration-300 ${item === "BLOG" ? "text-gray-500" : ""}`}
               >
                 {item}
               </li>
             ))}
-
-
           </ul>
           <p className="text-[#595959] text-sm mt-[5vh] text-center">Follow Us on;</p>
 
           <ul className=" flex gap-[] mt-[10px] justify-around py-[4px]">
-
-          <li><Facebook className="text-black"/></li>
-          <li><Twitter className="text-black"/></li>
-          <li><Instagram className="text-black"/></li>
-          <li><Linkedin className="text-black"/></li>
-        </ul>\
-        <p className="text-[#595959] text-sm mt-[10px] text-center">Clavistra@gmail.com</p>
-        <p className="text-[#595959] text-sm mt-[5px] text-center">+91 8965465545</p>
-
-  <p className="text-[#595959] text-xs mt-[4vh] text-center">@RIGHTS OWNED BY CLAVISTRA WEBOPS</p>
+            <li><Facebook className="text-black"/></li>
+            <li><Twitter className="text-black"/></li>
+            <li><Instagram className="text-black"/></li>
+            <li><Linkedin className="text-black"/></li>
+          </ul>
+          <p className="text-[#595959] text-sm mt-[10px] text-center">Clavistra@gmail.com</p>
+          <p className="text-[#595959] text-sm mt-[5px] text-center">+91 8965465545</p>
+          <p className="text-[#595959] text-xs mt-[4vh] text-center">@RIGHTS OWNED BY CLAVISTRA WEBOPS</p>
         </motion.div>
       </nav>
     </div>
