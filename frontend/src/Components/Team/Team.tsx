@@ -82,8 +82,8 @@ Our team brings together experienced management consultants, startup leaders, to
           <h4 className="title">Marketing Expert  <br/> Graphic Designer</h4>
         </div>
        <ul className="social flex gap-[10px] justify-around py-[4px]">
-       <a href="https://www.instagram.com/vaishali001?igsh=MTJ6dTZjNWY4dXVibw=="><Linkedin className="text-white"/></a>
-          <li><Instagram className="text-white"/></li>
+       <a ><Linkedin className="text-white"/></a>
+          <a href="https://www.instagram.com/vaishali001?igsh=MTJ6dTZjNWY4dXVibw=="><Instagram className="text-white"/></a>
           <li><Twitter className="text-white"/></li>
 
          
@@ -101,8 +101,8 @@ Our team brings together experienced management consultants, startup leaders, to
           
         </div>
        <ul className="social flex gap-[10px] justify-around py-[4px]">
-       <a href="https://www.instagram.com/imsamuel26?igsh=MTJweGR5eGZyaGFiOQ=="><Linkedin className="text-white"/></a>
-          <li><Instagram className="text-white"/></li>
+       <a href=""><Linkedin className="text-white"/></a>
+          <a href="https://www.instagram.com/imsamuel26?igsh=MTJweGR5eGZyaGFiOQ=="><Instagram className="text-white"/></a>
           <li><Twitter className="text-white"/></li>
 
           
