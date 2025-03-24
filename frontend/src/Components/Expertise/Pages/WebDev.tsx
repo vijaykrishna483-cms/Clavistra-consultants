@@ -87,8 +87,8 @@ const sendEmail = (e: FormEvent<HTMLFormElement>) => {
         transition={{ duration: 0.8, ease: "easeOut" }}
         className="w-[100vw]  md:h-[40%] px-[5%] md:px-[10%] flex justify-start"
       >
-        <h1 className=" py-[2vh] text-[#fff] w-[100%] text-4xl md:text-4xl md:text-[5vw] font-bold md:w-[60%] leading-tight">
-        Website Development & Management
+        <h1 className=" py-[2vh] text-[#fff] w-[100%] text-4xl md:text-[4vw] font-bold md:w-[60%] leading-tight">
+        Website Development <br/> & Management
         </h1>
       </motion.div>
 
@@ -233,7 +233,7 @@ const sendEmail = (e: FormEvent<HTMLFormElement>) => {
 </form>
 
 
-      <div className="w-[80%] md:ml-[9vh] mt-[2vh] flex flex-row justify-center items-center gap-[10px]">
+      <div className="w-[80%] mt-[2vh] flex flex-row justify-center items-center gap-[10px]">
         <button className="md:w-[90%] md:h-[50px] h-[60px] w-[80%] px-[2%] text-black rounded-3xl bg-transparent border-2 border-[#6c6969] text-center font-extralight hover:bg-gray-200 transition-all duration-200">
           Book A Call With Us!
         </button>

@@ -39,7 +39,7 @@ import {  FaCreditCard } from "react-icons/fa";
 // };
 const services = [
   {
-    title: "Brand Building & Analysis",
+    title: "Brand Strategy & Analysis",
     text: "Need a voice that speaks right to your audience's heart? That's where we come in!",
     image: "https://wallpaperbat.com/img/418492-six-industries-that-have-benefited-by-big-data-analytics.jpg",
     link: "/brandanalysis",
@@ -200,7 +200,7 @@ const Expertise = () => {
     initial={{ opacity: 0, y: 50 }}
     whileInView={{ opacity: 1, y: 0 }}
     transition={{ duration: 0.8, ease: "easeOut" }}
-    className="w-[100vw] md:h-[40%] px-[5%] mt-[10vh] md:px-[10%] flex justify-start"
+    className="w-[100vw] md:h-[40%] px-[5%]  md:mt-[10vh] md:px-[10%] flex justify-start"
   >
     <h1 className="border-b py-[2vh] border-gray-500/30 text-[#333333]  md:w-[60%] leading-tight">
      <span className="text-5xl md:text-[5vw] font-extralight">What We  </span><br/> <span className=" font-bold text-5xl md:text-[7vw]">Have to Offer </span> 

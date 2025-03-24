@@ -5,8 +5,8 @@ import BrandAnalysis from "./Components/Expertise/Pages/BrandAnalysis";
 
 // import BrandStrategy from "./Components/Expertise/Pages/Influencer";
 // import Website from "./Components/Expertise/Pages/Financial";
-import BrandStrategy from "./Components/Expertise/Pages/influencer";
-import Financial from "./Components/Expertise/Pages/financial";
+import BrandStrategy from "./Components/Expertise/Pages/Influencer";
+import Financial from "./Components/Expertise/Pages/Financial";
 import SocialMedia from "./Components/Expertise/Pages/SocialMedia";
 import SearchEngine from "./Components/Expertise/Pages/SearchEngine";
 

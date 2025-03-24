@@ -215,6 +215,6 @@
 
 .hovercard:hover{
   /* background-color: rgb(255, 255, 255); */
-  box-shadow: 0 4px 16px rgb(2, 5, 68);
+  box-shadow: 0 5px 16px #2a2e9a;
   border-radius: 10px;
 }

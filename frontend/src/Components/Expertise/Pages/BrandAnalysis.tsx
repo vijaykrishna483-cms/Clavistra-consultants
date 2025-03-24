@@ -104,8 +104,7 @@ const BrandAnalysis = () => {
             className="w-[100vw]  md:h-[40%] px-[5%] md:px-[10%] flex justify-start"
           >
             <h1 className=" py-[2vh] text-[#fff] w-[100%] text-4xl md:text-4xl md:text-[5vw] font-bold md:w-[60%] leading-tight">
-              Brand Building & Analysis
-            </h1>
+            Brand Strategy & Analysis            </h1>
           </motion.div>
         </div>
 
@@ -157,8 +156,8 @@ const BrandAnalysis = () => {
               alt={card.title}
               className="w-full h-[200px] object-cover rounded-md mb-4"
             />
-            <h3 className="text-xl font-semibold mb-2">{card.title}</h3>
-            <p className="text-gray-600">{card.text}</p>
+            <h3 className="text-xl font-semibold mb-2 text-center">{card.title}</h3>
+            <p className="text-gray-600 text-center">{card.text}</p>
           </motion.div>
         ))}
 
@@ -196,7 +195,7 @@ const BrandAnalysis = () => {
       </button>
 
       <img src="thefinal.png" className="w-[30vw] md:w-[15vw] mx-auto mb-4 rounded-lg " />
-      <h2 className="text-3xl md:text-2xl font-extralight mb-1 text-black text-center">Want to know more!</h2>
+      <h2 className="text-3xl md:text-2xl font-extralight mb-1 text-black text-center">Want to know more?</h2>
       <h2 className="text-2xl md:text-2xl font-semibold mb-1 text-black text-center">
         About {selectedCard.title}
       </h2>
@@ -221,7 +220,7 @@ const BrandAnalysis = () => {
 </form>
 
 
-      <div className="w-[80%] md:ml-[9vh] mt-[2vh] flex flex-row justify-center items-center gap-[10px]">
+      <div className="w-[80%] md:ml-[vh] mt-[2vh] flex flex-row justify-center items-center gap-[10px]">
         <button className="md:w-[90%] md:h-[50px] h-[60px] w-[80%] px-[2%] text-black rounded-3xl bg-transparent border-2 border-[#6c6969] text-center font-extralight hover:bg-gray-200 transition-all duration-200">
           Book A Call With Us!
         </button>
